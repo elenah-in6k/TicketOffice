@@ -10,18 +10,20 @@ public class InputOptions {
 
     InputStream input;
     Scanner inputOptions;
+    Printer printer;
 
-    public InputOptions(InputStream inputStream) {
+    public InputOptions(InputStream inputStream, Printer printer) {
         input = inputStream;
         inputOptions = new Scanner(input);
+        this.printer = printer;
     }
     public FlightOptions setOptions(){
-        System.out.print("Input date in format dd.mm.yyyy: ");
+        printer.printInputDateMessage();
         LocalDate date = LocalDate.parse(inputOptions.next().trim(),
                 DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        System.out.print("Input quntity ticket: ");
+        printer.printInputTicketMessage();
         int numberOfTicket = inputOptions.nextInt();
-        System.out.print("Input city: ");
+        printer.printInputCityMessage();
         String nameCity = inputOptions.next().trim();
         City city = new City(nameCity);
         return  new FlightOptions(date, numberOfTicket, city);

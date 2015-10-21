@@ -15,8 +15,9 @@ public class TicketOffice {
     public static void main(String[] s) {
         AllFlights flights = new AllFlights();
         flights.createFlightsList();
-        InputOptions inputOptions = new InputOptions(System.in);
         Printer printer = new Printer();
+        printer.printHelloMessage();
+        InputOptions inputOptions = new InputOptions(System.in, printer);
         FlightOptions flightOptions = inputOptions.setOptions();
         Flight flight = flights.searchFlight(flightOptions);
         if (flight != null) {
@@ -26,12 +27,6 @@ public class TicketOffice {
             }
         } else {
             printer.printSorryMessage();
-
         }
-
     }
-
-
-
-
 }
