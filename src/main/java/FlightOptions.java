@@ -14,7 +14,9 @@ public class FlightOptions {
     }
 
     public boolean test(Flight flight) {
-        return flight.city.equals(city);
+        return flight.city.equals(city)&
+        (flight.isNearDate(date))&
+        (flight.getNumberOfEmptyPlaces() >= numberOfTicket);
 
     }
 }

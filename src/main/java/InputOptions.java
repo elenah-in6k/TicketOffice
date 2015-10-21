@@ -16,9 +16,9 @@ public class InputOptions {
         inputOptions = new Scanner(input);
     }
     public FlightOptions setOptions(){
-        System.out.print("Input date in format dd/mm/yyyy: ");
+        System.out.print("Input date in format dd.mm.yyyy: ");
         LocalDate date = LocalDate.parse(inputOptions.next().trim(),
-                DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         System.out.print("Input quntity ticket: ");
         int numberOfTicket = inputOptions.nextInt();
         System.out.print("Input city: ");
