@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ public class Flight {
     LocalTime time;
     int numberOfReservedPlaces;
     List<Ticket> flight = new ArrayList<Ticket>(numberOfPlaces);
+
     Flight(City city, int numberOfPlaces,LocalDate date, LocalTime time){
         this.city = city;
         this.numberOfPlaces = numberOfPlaces;
@@ -23,9 +25,19 @@ public class Flight {
         }
     }
 
+    public Flight(City city, LocalDateTime dateTime, int places) {
+        this(city, places, dateTime.toLocalDate(), dateTime.toLocalTime());
+    }
+
+    boolean isNearDate(LocalDate nearDate){
+    return (date.isAfter(LocalDate.now())) & (date.isBefore(nearDate));
+    }
+
     int getNumberOfEmptyPlaces(){
+        getNumberOfReservedPlaces();
         return numberOfPlaces - numberOfReservedPlaces;
     }
+
     int getNumberOfReservedPlaces() {
         numberOfReservedPlaces = 0;
         for (Ticket ticket : flight){
@@ -35,5 +47,17 @@ public class Flight {
         }
 
         return numberOfReservedPlaces;
+    }
+
+    public Ticket buyTicket(){
+        if(getNumberOfEmptyPlaces() > 0){
+            for(Ticket ticket : flight){
+                if(!ticket.isReserved()){
+                    ticket.Booking();
+                    return ticket;
+                }
+            }
+        }
+        return null;
     }
 }

@@ -4,7 +4,6 @@ import java.time.LocalDate;
  * Created by employee on 10/20/15.
  */
 public class Ticket {
-
     boolean reserved = false;
     int seatingPosition;
 
