@@ -83,6 +83,6 @@ public class TicketOfficeControllerTest implements Printer, InputOptions, Ticket
     }
 
     public void addFlight(FlightImpl flightImpl) {
-
+  
     }
 }
