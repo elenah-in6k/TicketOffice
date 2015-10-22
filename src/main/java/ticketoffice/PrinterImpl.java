@@ -1,3 +1,5 @@
+package ticketoffice;
+
 import java.io.PrintStream;
 
 /**
@@ -6,7 +8,7 @@ import java.io.PrintStream;
 public class PrinterImpl implements Printer  {
     PrintStream printStream;
 
-    PrinterImpl(PrintStream printStream) {
+    public PrinterImpl(PrintStream printStream) {
         this.printStream = printStream;
     }
 
@@ -35,10 +37,10 @@ public class PrinterImpl implements Printer  {
     }
 
     public void printFlightInfo(FlightImpl flightImpl) {
-        printStream.println("FlightImpl: ");
+        printStream.println("ticketoffice.FlightImpl: ");
         printStream.println("Date: "+ flightImpl.date);
         printStream.println("Time: "+ flightImpl.time);
-        printStream.println("City: "+ flightImpl.city.name);
+        printStream.println("ticketoffice.City: "+ flightImpl.city.name);
 
     }
 }

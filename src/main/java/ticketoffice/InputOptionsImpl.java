@@ -1,3 +1,5 @@
+package ticketoffice;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDate;
@@ -18,24 +20,26 @@ public class InputOptionsImpl implements InputOptions {
         inputOptions = new Scanner(input);
         this.printerImpl = printerImpl;
     }
-    public FlightOptions setOptions(){
-       read();
-    printerImpl.printInputDateMessage();
+
+    public FlightOptions readSearchOptions() {
+        read();
+        printerImpl.printInputDateMessage();
         LocalDate date = LocalDate.parse(inputOptions.next(),
                 DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
         printerImpl.printInputTicketMessage();
         int numberOfTicket = Integer.parseInt(inputOptions.next());
 
-    printerImpl.printInputCityMessage();
+        printerImpl.printInputCityMessage();
         String nameCity = inputOptions.next();
         City city = new City(nameCity);
-     return  new FlightOptions(date, numberOfTicket, city);
+        return new FlightOptions(date, numberOfTicket, city);
 
-//        return  new FlightOptions(LocalDate.parse("30.11.2015",
+//        return  new ticketoffice.FlightOptions(LocalDate.parse("30.11.2015",
 //               DateTimeFormatter.ofPattern("dd.MM.yyyy")), 1, city);
     }
-    public void read(){
+
+    public void read() {
         byte[] inputChar = new byte[0];
         try {
             input.read(inputChar);

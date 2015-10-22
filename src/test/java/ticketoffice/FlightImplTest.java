@@ -1,4 +1,9 @@
+package ticketoffice;
+
 import org.junit.Test;
+import ticketoffice.City;
+import ticketoffice.FlightImpl;
+import ticketoffice.Ticket;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

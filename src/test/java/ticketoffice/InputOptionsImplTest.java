@@ -1,3 +1,5 @@
+package ticketoffice;
+
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -15,8 +17,8 @@ public class InputOptionsImplTest {
         Printer printer = new PrinterImpl(System.out);
         InputStream input = new ByteArrayInputStream("30.11.2015\n1\nlviv".getBytes());
         InputOptionsImpl inputOptions = new InputOptionsImpl(input, printer);
-        assertThat(inputOptions.setOptions().city.name, is("lviv"));
-        
+        assertThat(inputOptions.readSearchOptions().city.name, is("lviv"));
+
     }
 
 }

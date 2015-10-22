@@ -1,3 +1,5 @@
+package ticketoffice;
+
 /**
  * Created by employee on 10/20/15.
  */
@@ -21,5 +23,9 @@ public class City {
     @Override
     public int hashCode() {
         return name != null ? name.hashCode() : 0;
+    }
+
+    public String getName() {
+        return name;
     }
 }

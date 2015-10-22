@@ -1,3 +1,5 @@
+package ticketoffice;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -59,5 +61,9 @@ public class FlightImpl implements Flight {
             }
         }
         return null;
+    }
+
+    public String toString(){
+        return String.format("%s %s", city.getName(), date);
     }
 }

@@ -1,3 +1,5 @@
+package ticketoffice;
+
 import java.time.LocalDate;
 
 /**
@@ -17,6 +19,10 @@ public class FlightOptions {
         return flightImpl.city.equals(city)&
         (flightImpl.isNearDate(date))&
         (flightImpl.getNumberOfEmptyPlaces() >= numberOfTicket);
+   }
 
+    @Override
+    public String toString() {
+        return String.format("%s %s", city.getName(), date);
     }
 }
