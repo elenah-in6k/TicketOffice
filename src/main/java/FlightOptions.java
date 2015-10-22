@@ -13,10 +13,10 @@ public class FlightOptions {
         this.city = city;
     }
 
-    public boolean test(Flight flight) {
-        return flight.city.equals(city)&
-        (flight.isNearDate(date))&
-        (flight.getNumberOfEmptyPlaces() >= numberOfTicket);
+    public boolean test(FlightImpl flightImpl) {
+        return flightImpl.city.equals(city)&
+        (flightImpl.isNearDate(date))&
+        (flightImpl.getNumberOfEmptyPlaces() >= numberOfTicket);
 
     }
 }

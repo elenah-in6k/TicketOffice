@@ -15,12 +15,12 @@ public class AllFlightsTest {
 
     public static final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     public static final DateTimeFormatter DATETIME_FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-    private AllFlights allFlights;
+    private AllFlights allFlightsImpl;
     private City lviv = new City("Lviv");
 
     @Before
     public void setUp() {
-        allFlights = new AllFlights();
+        allFlightsImpl = new AllFlightsImpl();
     }
 
     private FlightOptions flightOptions(String city, String date, int tickets) {
@@ -44,46 +44,46 @@ public class AllFlightsTest {
     public void testNoFlights() throws Exception {
         FlightOptions options = flightOptions("Lviv", "30.11.2015");
 
-        Flight flight = allFlights.searchFlight(options);
+        Flight flightImpl = allFlightsImpl.searchFlight(options);
 
-        assertThat(flight, nullValue());
+        assertThat(flightImpl, nullValue());
     }
 
     @Test
     public void testFlightThatSatisfyAllCriteria() throws Exception {
 
-        Flight flight1 = new Flight(lviv, dateTime("18.12.2015 12:15"), 10);
-        allFlights.addFlight(flight1);
-        Flight flight2 = new Flight(new City("Kyiv"), dateTime("27.11.2015 12:15"), 10);
-        allFlights.addFlight(flight2);
-        Flight flight3 = new Flight(new City("Odesa"), dateTime("15.11.2015 12:15"), 10);
-        allFlights.addFlight(flight2);
+        FlightImpl flightImpl1 = new FlightImpl(lviv, dateTime("18.12.2015 12:15"), 10);
+        allFlightsImpl.addFlight(flightImpl1);
+        FlightImpl flightImpl2 = new FlightImpl(new City("Kyiv"), dateTime("27.11.2015 12:15"), 10);
+        allFlightsImpl.addFlight(flightImpl2);
+        FlightImpl flightImpl3 = new FlightImpl(new City("Odesa"), dateTime("15.11.2015 12:15"), 10);
+        allFlightsImpl.addFlight(flightImpl2);
         FlightOptions options = flightOptions("Lviv", "30.11.2015");
-        Flight flight = new Flight(lviv, dateTime("27.11.2015 12:15"), 10);
-        allFlights.addFlight(flight);
-        Flight foundFlight = allFlights.searchFlight(options);
+        FlightImpl flightImpl = new FlightImpl(lviv, dateTime("27.11.2015 12:15"), 10);
+        allFlightsImpl.addFlight(flightImpl);
+        FlightImpl foundFlightImpl = allFlightsImpl.searchFlight(options);
 
-        assertThat(foundFlight, is(flight));
+        assertThat(foundFlightImpl, is(flightImpl));
     }
 
     @Test
     public void testFlightThatNotSatisfyCityCriteria() throws Exception {
-        Flight flight = new Flight(lviv, dateTime("29.11.2015 12:15"), 10);
-        allFlights.addFlight(flight);
+        FlightImpl flightImpl = new FlightImpl(lviv, dateTime("29.11.2015 12:15"), 10);
+        allFlightsImpl.addFlight(flightImpl);
         FlightOptions options = flightOptions("Kiev", "30.11.2015");
 
-        Flight foundFlight = allFlights.searchFlight(options);
+        FlightImpl foundFlightImpl = allFlightsImpl.searchFlight(options);
 
-        assertThat(foundFlight, nullValue());
+        assertThat(foundFlightImpl, nullValue());
     }
     @Test
     public void testFlightThatNotSatisfyAllCriterias() throws Exception {
-        Flight flight = new Flight(lviv, dateTime("29.11.2015 12:15"), 10);
-        allFlights.addFlight(flight);
+        FlightImpl flightImpl = new FlightImpl(lviv, dateTime("29.11.2015 12:15"), 10);
+        allFlightsImpl.addFlight(flightImpl);
         FlightOptions options = flightOptions("Kiev", "15.11.2015");
 
-        Flight foundFlight = allFlights.searchFlight(options);
+        FlightImpl foundFlightImpl = allFlightsImpl.searchFlight(options);
 
-        assertThat(foundFlight, nullValue());
+        assertThat(foundFlightImpl, nullValue());
     }
 }
