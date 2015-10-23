@@ -1,3 +1,4 @@
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ticketoffice.*;
 
 /**
@@ -5,6 +6,14 @@ import ticketoffice.*;
  */
 public class App {
     public static void main(String[] s) {
+
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                new String[] {"bean.xml"}, true);
+        TOService service = (TOService)context.getBean("storageService");
+        service.save(null);
+
+
+
         TicketOffice ticketOffice = new TicketOfficeImpl();
 
         Printer printer = new PrinterImpl(System.out);

@@ -9,6 +9,10 @@ import java.util.List;
 public class TicketOfficeImpl implements TicketOffice {
 
     private List<FlightImpl> flights = new ArrayList<FlightImpl>();
+    public TicketOfficeImpl(){
+        FlightFactory flightFactory = new FlightFactory();
+        flights = flightFactory.createFlightsList();
+    }
 
     public FlightImpl searchFlight(FlightOptions flightOptions) {
         if (flights.size() == 0) return null;
