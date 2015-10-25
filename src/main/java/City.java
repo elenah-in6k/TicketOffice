@@ -4,17 +4,17 @@ import javax.persistence.*;
  * Created by employee on 10/23/15.
  */
 @Entity
-public class CityN {
+public class City {
     public void setId() {
-        this.id = 1;
+        this.idCity = 1;
     }
 
     public void setName() {
         this.name = "SS";
     }
 
-    public int getId() {
-        return id;
+    public int getIdCity() {
+        return idCity;
     }
 
     public String getName() {
@@ -23,8 +23,8 @@ public class CityN {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idCity;
 
-    @Column(name = "city", length = 100, nullable = false)
+    @Column(name = "name", length = 100, nullable = false)
     private String name;
 }

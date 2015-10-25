@@ -1,5 +1,4 @@
 import org.springframework.stereotype.Service;
-import ticketoffice.Flight;
 
 import java.util.List;
 
@@ -9,11 +8,11 @@ import java.util.List;
 @Service("storageService")
 public class TOServiceImpl implements  TOService {
     private OfficeDao dao;
-    public void save(CityN content) {
+    public void save(City content) {
         dao.save(content);
     }
 
-    public List<CityN> getAll() {
+    public List<City> getAll() {
         return dao.getAll();
     }
 }

@@ -1,5 +1,3 @@
-import ticketoffice.Flight;
-
 import java.util.List;
 import org.springframework.stereotype.Repository;
 
@@ -18,12 +16,12 @@ public class OfficeDaoImpl implements OfficeDao  {
     private EntityManager em;
 
 
-    public void save(CityN content) {
+    public void save(City content) {
         em.persist(content);
     }
 
-    public List<CityN> getAll() {
-        return em.createQuery("from CityN", CityN.class).getResultList();
+    public List<City> getAll() {
+        return em.createQuery("from City", City.class).getResultList();
     }
 
 }
