@@ -25,15 +25,22 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf">
-        <schema name="tick" object-types="function, procedure, table, view" />
-        <schema name="ticketoffice" object-types="column, constraint, function, index, procedure, table, trigger, view" />
+        <schema name="ticketoffice" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d2139529-fac2-425d-a595-015d3a0ea0cf">
-      <console name="ticketOffice" type="STANDARD" />
+      <console name="ticketOffice" type="STANDARD"><![CDATA[ALTER TABLE `ticketoffice`.`flight`
+CHANGE COLUMN `dataTime` `dataTime` DATETIME NOT NULL ,
+ADD COLUMN `name` VARCHAR(45) NOT NULL AFTER `numberOfReservedPlace`;
+
+select *
+from city;]]></console>
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-list connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf" dataset="ticketoffice.city" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/main/aaa.sql" connection-id="virtual-mysql-connection" current-schema="ROOT" />

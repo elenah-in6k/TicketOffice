@@ -7,12 +7,14 @@ import java.util.List;
  */
 @Service("storageService")
 public class TOServiceImpl implements  TOService {
-    private OfficeDao dao;
+        private GenericDao<City,Integer> dao = new GenericDaoImpl<City,Integer>(City.class);
     public void save(City content) {
         dao.save(content);
     }
 
+
     public List<City> getAll() {
-        return dao.getAll();
+        return null;
+        //dao.getAll();
     }
 }

@@ -1,10 +1,18 @@
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by employee on 10/23/15.
  */
 @Entity
-public class City {
+public class City implements Serializable {
+    @Id
+   // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idCity;
+
+    @Column(name = "name", length = 100, nullable = false)
+    private String name;
+
     public void setId() {
         this.idCity = 1;
     }
@@ -20,11 +28,4 @@ public class City {
     public String getName() {
         return name;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCity;
-
-    @Column(name = "name", length = 100, nullable = false)
-    private String name;
 }

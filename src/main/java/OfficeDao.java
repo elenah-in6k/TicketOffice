@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,3 +8,4 @@ public interface OfficeDao {
     public void save(City content);
     public List<City> getAll();
 }
+
