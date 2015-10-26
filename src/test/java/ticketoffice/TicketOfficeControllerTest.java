@@ -5,6 +5,9 @@ import core.inputOtpute.InputOptions;
 import core.inputOtpute.Printer;
 import org.junit.Before;
 import org.junit.Test;
+import ticketoffice.oldclasses.City;
+import ticketoffice.oldclasses.FlightImpl;
+import ticketoffice.oldclasses.Ticket;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

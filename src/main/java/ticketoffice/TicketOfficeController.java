@@ -1,8 +1,10 @@
 package ticketoffice;
 
+import core.entity.Flight;
 import core.inputOtpute.FlightOptions;
 import core.inputOtpute.InputOptions;
 import core.inputOtpute.Printer;
+
 
 /**
  * Created by employee on 10/22/15.
@@ -21,12 +23,12 @@ public class TicketOfficeController {
 
     public void openTicketOffice() {
         FlightOptions flightOptions = input.readSearchOptions();
-        FlightImpl flight = ticketOffice.searchFlight(flightOptions);
+        Flight flight = ticketOffice.searchFlight(flightOptions);
         hasSearchFlight(flight);
         //printer.printTicket(flight.buyTicket());
     }
 
-    public void hasSearchFlight(FlightImpl flight) {
+    public void hasSearchFlight(Flight flight) {
         if (flight != null) {
             printer.printFlightInfo(flight);
         } else {

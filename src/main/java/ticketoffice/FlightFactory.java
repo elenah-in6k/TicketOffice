@@ -1,5 +1,8 @@
 package ticketoffice;
 
+import ticketoffice.oldclasses.City;
+import ticketoffice.oldclasses.FlightImpl;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

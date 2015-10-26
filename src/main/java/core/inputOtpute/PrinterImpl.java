@@ -41,7 +41,7 @@ public class PrinterImpl implements Printer  {
     }
 
     public void printFlightInfo(Flight flight) {
-        printStream.println("ticketoffice.FlightImpl: ");
+        printStream.println("ticketoffice.oldclasses.FlightImpl: ");
         printStream.println("DateTime: "+ flight.getDateTime());
         printStream.println("City: "+ flight.getIdCity());
 

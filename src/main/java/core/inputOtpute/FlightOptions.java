@@ -2,7 +2,6 @@ package core.inputOtpute;
 
 import core.entity.City;
 import core.entity.Flight;
-import ticketoffice.FlightImpl;
 
 import java.time.LocalDate;
 
