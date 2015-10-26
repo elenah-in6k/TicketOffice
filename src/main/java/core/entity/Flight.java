@@ -1,3 +1,5 @@
+package core.entity;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -8,6 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Flight implements Serializable {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idFlight;
 
@@ -46,8 +49,8 @@ public class Flight implements Serializable {
         this.idFlight = 1;
     }
 
-    public void setName() {
-        this.name = "SS";
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getIdFlight() {

@@ -3,68 +3,49 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+             http://www.springframework.org/schema/tx
+             http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+             http://www.springframework.org/schema/context
+             http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="developer.remarks"/>
-    <bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
-
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/ticketoffice" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/TicketOffice" />
         <property name="username" value="root" />
-        <property name="password" value="root" />
+        <property name="password" value="masterkey" />
     </bean>
 
-    <bean id="jpaVendorAdapter"
-          class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-        <property name="database" value="MYSQL"/>
-        <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"/>
-    </bean>
-
-    <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-          id="entityManagerFactory">
-        <property name="persistenceXmlLocation" value="classpath:persistence.xml"/>
-        <property name="persistenceUnitName" value="persistence.unit"/>
-        <property name="dataSource" ref="dataSource"/>
-        <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
-        <property name="jpaDialect" ref="jpaDialect"/>
-    </bean>
-
-    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="configLocation" value="classpath:/hibernate.cfg.xml" />
-
+        <property name="packagesToScan" value="core.entity"/>
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="show_sql">true</prop>
+                <prop key="dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hbm2ddl.auto">update</prop>
+                <prop key="useUnicode">true</prop>
+                <prop key="hibernate.id.new_generator_mappins">false</prop>
             </props>
-        </property>
-        <property name="annotatedClasses">
-            <list>
-                <value>City</value>
-                <value>Flight</value>
-                <value>Ticket</value>
-
-            </list>
         </property>
     </bean>
 
     <bean id="transactionManager"
-          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
-
     </bean>
-    <bean id="storageService" class="TOServiceImpl"/>
-    <bean id="cityDao" class="CityDaoImpl">
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager"/>
+
+
+    <bean id="cityDao" class="persistance.daoImplements.CityDaoImpl">
         <constructor-arg>
-            <value>City</value>
+            <value>core.entity.City</value>
         </constructor-arg>
+
             </bean>
-    <!--</bean>-->
 
     </beans>

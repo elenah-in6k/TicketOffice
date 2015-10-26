@@ -1,4 +1,7 @@
-import org.springframework.stereotype.Component;
+package persistance.daoImplements;
+
+import core.entity.City;
+import core.daoInterface.CityDao;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

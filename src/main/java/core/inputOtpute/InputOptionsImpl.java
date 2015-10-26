@@ -1,4 +1,6 @@
-package ticketoffice;
+package core.inputOtpute;
+
+import ticketoffice.City;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,7 +37,7 @@ public class InputOptionsImpl implements InputOptions {
         City city = new City(nameCity);
         return new FlightOptions(date, numberOfTicket, city);
 
-//        return  new ticketoffice.FlightOptions(LocalDate.parse("30.11.2015",
+//        return  new core.inputOtpute.FlightOptions(LocalDate.parse("30.11.2015",
 //               DateTimeFormatter.ofPattern("dd.MM.yyyy")), 1, city);
     }
 

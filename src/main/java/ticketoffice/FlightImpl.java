@@ -10,10 +10,10 @@ import java.util.List;
  * Created by employee on 10/20/15.
  */
 public class FlightImpl implements Flight {
-    City city;
+    public City city;
     int numberOfPlaces;
-    LocalDate date;
-    LocalTime time;
+    public LocalDate date;
+    public LocalTime time;
     int numberOfReservedPlaces;
     List<Ticket> flight = new ArrayList<Ticket>(numberOfPlaces);
 

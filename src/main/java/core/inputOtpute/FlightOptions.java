@@ -1,4 +1,7 @@
-package ticketoffice;
+package core.inputOtpute;
+
+import ticketoffice.City;
+import ticketoffice.FlightImpl;
 
 import java.time.LocalDate;
 
@@ -8,8 +11,8 @@ import java.time.LocalDate;
 public class FlightOptions {
     LocalDate date;
     int numberOfTicket;
-    City city;
-    FlightOptions(LocalDate date, int numberOfTicket, City city){
+    public City city;
+    public FlightOptions(LocalDate date, int numberOfTicket, City city){
         this.date = date;
         this.numberOfTicket = numberOfTicket;
         this.city = city;

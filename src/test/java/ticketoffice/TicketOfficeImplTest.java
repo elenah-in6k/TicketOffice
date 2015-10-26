@@ -1,5 +1,6 @@
 package ticketoffice;
 
+import core.inputOtpute.FlightOptions;
 import org.junit.Before;
 import org.junit.Test;
 

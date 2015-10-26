@@ -1,20 +1,18 @@
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package core.entity;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 
 /**
  * Created by Алена on 25.10.2015.
  */
+@Entity
 public class Ticket implements Serializable {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTicket;
-
-    @Column(name = "name", length = 100, nullable = false)
-    private String name;
 
     @Column(name = "idFlight")
     private int idFlight;
@@ -29,10 +27,6 @@ public class Ticket implements Serializable {
         this.idTicket = idTicket;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setIdFlight(int idFlight) {
         this.idFlight = idFlight;
     }
@@ -41,17 +35,13 @@ public class Ticket implements Serializable {
         this.numberOfPlace = numberOfPlace;
     }
 
-    public void setReserved(boolean reserved) {
-        this.reserved = reserved;
+    public void setReserved() {
+        this.reserved = true;
     }
 
     public int getIdTicket() {
 
         return idTicket;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public int getIdFlight() {

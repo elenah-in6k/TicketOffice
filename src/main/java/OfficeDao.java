@@ -1,4 +1,5 @@
-import java.io.Serializable;
+import core.entity.City;
+
 import java.util.List;
 
 /**

@@ -1,3 +1,5 @@
+import core.entity.City;
+
 import java.util.List;
 
 /**

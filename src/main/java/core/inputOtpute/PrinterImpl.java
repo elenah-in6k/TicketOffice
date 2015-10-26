@@ -1,4 +1,7 @@
-package ticketoffice;
+package core.inputOtpute;
+
+import ticketoffice.FlightImpl;
+import ticketoffice.Ticket;
 
 import java.io.PrintStream;
 
@@ -40,7 +43,7 @@ public class PrinterImpl implements Printer  {
         printStream.println("ticketoffice.FlightImpl: ");
         printStream.println("Date: "+ flightImpl.date);
         printStream.println("Time: "+ flightImpl.time);
-        printStream.println("ticketoffice.City: "+ flightImpl.city.name);
+        printStream.println("ticketoffice.core.entity.City: "+ flightImpl.city.name);
 
     }
 }

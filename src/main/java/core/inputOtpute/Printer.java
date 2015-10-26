@@ -1,4 +1,7 @@
-package ticketoffice;
+package core.inputOtpute;
+
+import ticketoffice.FlightImpl;
+import ticketoffice.Ticket;
 
 /**
  * Created by employee on 10/22/15.

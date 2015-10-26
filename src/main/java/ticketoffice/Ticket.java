@@ -1,13 +1,11 @@
 package ticketoffice;
 
-import java.time.LocalDate;
-
 /**
  * Created by employee on 10/20/15.
  */
 public class Ticket {
     boolean reserved = false;
-    int seatingPosition;
+    public int seatingPosition;
 
     Ticket(int seatingPosition){
         this.seatingPosition = seatingPosition;

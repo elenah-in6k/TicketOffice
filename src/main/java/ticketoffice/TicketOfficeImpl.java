@@ -1,5 +1,7 @@
 package ticketoffice;
 
+import core.inputOtpute.FlightOptions;
+
 import java.util.ArrayList;
 import java.util.List;
 

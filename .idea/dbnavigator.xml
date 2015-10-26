@@ -16,7 +16,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1251" />
+      <charset value="ISO-8859-1" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -25,18 +25,14 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf">
-        <schema name="ticketoffice" object-types="table, view" />
+        <schema name="TicketOffice" object-types="table" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d2139529-fac2-425d-a595-015d3a0ea0cf">
-      <console name="ticketOffice" type="STANDARD"><![CDATA[ALTER TABLE `ticketoffice`.`flight`
-CHANGE COLUMN `dataTime` `dataTime` DATETIME NOT NULL ,
-ADD COLUMN `name` VARCHAR(45) NOT NULL AFTER `numberOfReservedPlace`;
-
-select *
-from city;]]></console>
+      <console name="ticketOffice" type="STANDARD"><![CDATA[select *
+from City;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
@@ -73,18 +69,18 @@ from city;]]></console>
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="5.7" />
+          <database-version value="5.5" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
           <host value="localhost" />
           <port value="3306" />
-          <database value="ticketoffice" />
+          <database value="TicketOffice" />
           <url-type value="DATABASE" />
           <os-authentication value="false" />
           <empty-password value="false" />
           <user value="root" />
-          <password value="cm9vdA==" />
+          <password value="bWFzdGVya2V5" />
         </database>
         <properties>
           <auto-commit value="false" />

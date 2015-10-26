@@ -7,8 +7,8 @@ package ticketoffice;
  */
 
 public class City {
-    String name;
-    City(String name){
+    public String name;
+    public City(String name){
         this.name = name;
     }
 

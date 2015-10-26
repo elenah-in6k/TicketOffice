@@ -1,4 +1,6 @@
 import java.util.List;
+
+import core.entity.City;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -21,7 +23,7 @@ public class OfficeDaoImpl implements OfficeDao  {
     }
 
     public List<City> getAll() {
-        return em.createQuery("from City", City.class).getResultList();
+        return em.createQuery("from core.entity.City", City.class).getResultList();
     }
 
 }

@@ -1,5 +1,8 @@
 package ticketoffice;
 
+import core.inputOtpute.InputOptionsImpl;
+import core.inputOtpute.Printer;
+import core.inputOtpute.PrinterImpl;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
