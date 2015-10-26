@@ -1,6 +1,7 @@
 package core.inputOtpute;
 
-import ticketoffice.City;
+import core.entity.City;
+import core.entity.Flight;
 import ticketoffice.FlightImpl;
 
 import java.time.LocalDate;
@@ -18,10 +19,10 @@ public class FlightOptions {
         this.city = city;
     }
 
-    public boolean test(FlightImpl flightImpl) {
-        return flightImpl.city.equals(city)&
-        (flightImpl.isNearDate(date))&
-        (flightImpl.getNumberOfEmptyPlaces() >= numberOfTicket);
+    public boolean test(Flight flight) {
+        return (flight.getIdCity() == city.getId())&
+        (flight.isNearDate(date))&
+        (flight.getNumberOfEmptyPlaces() >= numberOfTicket);
    }
 
     @Override

@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf">
-        <schema name="TicketOffice" object-types="table" />
+        <schema name="TicketOffice" object-types="column, constraint, function, index, procedure, table, trigger, view" />
       </connection>
     </loaded-nodes>
   </component>

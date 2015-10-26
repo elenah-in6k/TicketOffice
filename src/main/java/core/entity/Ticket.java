@@ -21,7 +21,7 @@ public class Ticket implements Serializable {
     private int numberOfPlace;
 
     @Column(name = "reserved")
-    private boolean reserved;
+    private boolean reserved = false;
 
     public void setIdTicket(int idTicket) {
         this.idTicket = idTicket;

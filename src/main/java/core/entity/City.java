@@ -16,7 +16,9 @@ public class City implements Serializable {
 
     @Column(name = "name", length = 100, nullable = false)
     private String name;
-
+    public City(String name){
+        this.name = name;
+    }
     public void setId(int id) {
         this.id = id;
     }

@@ -1,6 +1,6 @@
 package core.inputOtpute;
 
-import ticketoffice.City;
+import core.entity.City;
 
 import java.io.IOException;
 import java.io.InputStream;

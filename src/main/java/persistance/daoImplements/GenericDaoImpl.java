@@ -16,7 +16,7 @@ public abstract class GenericDaoImpl<T, PK extends Serializable>
 
     @Autowired
     protected SessionFactory sessionFactory;
-    private final Class<T> entityClass;
+    public final Class<T> entityClass;
 
 
     public GenericDaoImpl(Class<T> entityClass) {

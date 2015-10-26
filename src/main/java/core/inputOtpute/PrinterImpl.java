@@ -1,7 +1,8 @@
 package core.inputOtpute;
 
-import ticketoffice.FlightImpl;
-import ticketoffice.Ticket;
+
+import core.entity.Flight;
+import core.entity.Ticket;
 
 import java.io.PrintStream;
 
@@ -36,14 +37,13 @@ public class PrinterImpl implements Printer  {
     }
 
     public void printTicket(Ticket ticket) {
-        printStream.println("Seating position: " + ticket.seatingPosition+"\n");
+        printStream.println("Seating position: " + ticket.getNumberOfPlace()+"\n");
     }
 
-    public void printFlightInfo(FlightImpl flightImpl) {
+    public void printFlightInfo(Flight flight) {
         printStream.println("ticketoffice.FlightImpl: ");
-        printStream.println("Date: "+ flightImpl.date);
-        printStream.println("Time: "+ flightImpl.time);
-        printStream.println("ticketoffice.core.entity.City: "+ flightImpl.city.name);
+        printStream.println("DateTime: "+ flight.getDateTime());
+        printStream.println("City: "+ flight.getIdCity());
 
     }
 }

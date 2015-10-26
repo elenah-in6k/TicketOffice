@@ -2,6 +2,7 @@ package core.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -14,7 +15,7 @@ public class Flight implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idFlight;
 
-    @Column(name = "name", length = 100, nullable = false)
+    @Column(name = "name")
     private String name;
 
     @Column(name = "idCity")
@@ -29,6 +30,12 @@ public class Flight implements Serializable {
     @Column(name = "numberOfReservedPlace")
     private int numberOfReservedPlace;
 
+    Flight(String name, int idCity, LocalDateTime dateTime, int numberOfPlace){
+        this.name = name;
+        this.idCity = idCity;
+        this.dateTime = dateTime;
+        this.numberOfPlace = numberOfPlace;
+    }
     public int getIdCity() {
         return idCity;
     }
@@ -43,6 +50,9 @@ public class Flight implements Serializable {
 
     public int getNumberOfReservedPlace() {
         return numberOfReservedPlace;
+//        "select count(t.id)"+
+//        "from Ticket t, Flight f "+
+//        "where (t.idFlight = f.id)and(t.reserved = true)"
     }
 
     public void setId() {
@@ -61,5 +71,11 @@ public class Flight implements Serializable {
         return name;
     }
 
+    public boolean isNearDate(LocalDate nearDate){
+        return (dateTime.toLocalDate().isAfter(LocalDate.now())) & (dateTime.toLocalDate().isBefore(nearDate));
+    }
+    public int getNumberOfEmptyPlaces(){
+        return numberOfPlace - getNumberOfReservedPlace();
+    }
 
 }

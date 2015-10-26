@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface FlightDao extends GenericDao<Flight, Integer> {
     List<Flight> findByDate(LocalDateTime dateTime);
+
 }
