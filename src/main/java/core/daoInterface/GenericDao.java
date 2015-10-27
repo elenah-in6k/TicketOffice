@@ -12,4 +12,5 @@ public interface GenericDao<T, PK extends Serializable> {
     void update(T t);
     void delete(T t);
     void save(T t);
+    List<T> getAll();
 }

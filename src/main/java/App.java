@@ -1,7 +1,12 @@
+import core.daoInterface.FlightDao;
 import core.entity.City;
 import core.daoInterface.CityDao;
+import core.entity.Flight;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -18,15 +23,19 @@ public class App {
         CityDao dao = (CityDao)context.getBean("cityDao");
 
 //        for(int i=1; i<=6; i++){
-//        City p = new City();
-//        p.setName("Lviv");
-//        dao.create(p);
+//        City p = new City("Lviv");
+//            dao.create(p);
 //        System.out.print(p.getId() + " " + p.getName());}
-        List<City> qq= dao.read(5, "id");
-        for(City c : qq){
-            System.out.print(c.getId()+" "+c.getName());
-        }
-
+//        List<City> qq= dao.read(5, "id");
+//        for(City c : qq){
+//            System.out.print(c.getId()+" "+c.getName());
+//        }
+        FlightDao fDao = (FlightDao)context.getBean("flightDao");
+        DateTimeFormatter DATETIME_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        List<Flight> flights = fDao.findByDate(LocalDateTime.parse("2015-11-28 00:00", DATETIME_FORMAT));
+            for(Flight f: flights){
+                System.out.print(f.getIdFlight()+" "+f.getName()+" "+f.getDateTime());
+            }
 //        TicketOffice ticketOffice = new TicketOfficeImpl();
 //
 //        Printer printer = new PrinterImpl(System.out);

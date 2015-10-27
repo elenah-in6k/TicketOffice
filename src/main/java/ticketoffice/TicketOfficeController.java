@@ -23,8 +23,8 @@ public class TicketOfficeController {
 
     public void openTicketOffice() {
         FlightOptions flightOptions = input.readSearchOptions();
-        Flight flight = ticketOffice.searchFlight(flightOptions);
-        hasSearchFlight(flight);
+       // Flight flight = ticketOffice.searchFlight(flightOptions);
+       // hasSearchFlight(flight);
         //printer.printTicket(flight.buyTicket());
     }
 

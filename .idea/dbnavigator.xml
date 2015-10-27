@@ -16,7 +16,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="ISO-8859-1" />
+      <charset value="windows-1251" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -25,14 +25,20 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf">
-        <schema name="TicketOffice" object-types="column, constraint, function, index, procedure, table, trigger, view" />
+        <schema name="ticketoffice" object-types="function, procedure, table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d2139529-fac2-425d-a595-015d3a0ea0cf">
       <console name="ticketOffice" type="STANDARD"><![CDATA[select *
-from City;]]></console>
+from flight
+where (dataTime > CURDATE())and(dataTime <= '2015-11-28');
+insert into flight(idCity, numberOfPlace, dataTime,numberOfReservedPlace, name) values(2, 10, '2015-11-27', 0, 'Lviv');
+insert into flight(idCity, numberOfPlace, dataTime,numberOfReservedPlace, name) values(2, 10, '2015-11-17', 0, 'Kyiv');
+insert into flight(idCity, numberOfPlace, dataTime,numberOfReservedPlace, name) values(7, 10, '2015-1-27', 0, 'Krakiv');
+select *
+from flight;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
@@ -69,18 +75,18 @@ from City;]]></console>
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="5.5" />
+          <database-version value="5.7" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
           <host value="localhost" />
           <port value="3306" />
-          <database value="TicketOffice" />
+          <database value="ticketoffice" />
           <url-type value="DATABASE" />
           <os-authentication value="false" />
           <empty-password value="false" />
           <user value="root" />
-          <password value="bWFzdGVya2V5" />
+          <password value="cm9vdA==" />
         </database>
         <properties>
           <auto-commit value="false" />

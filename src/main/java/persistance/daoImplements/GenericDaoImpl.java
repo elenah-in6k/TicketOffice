@@ -45,4 +45,7 @@ public abstract class GenericDaoImpl<T, PK extends Serializable>
     public void save(T t) {
         sessionFactory.getCurrentSession().persist(t);
     }
+    public List<T> getAll(){
+        return this.sessionFactory.getCurrentSession().createQuery(String.format("from %s", entityClass.getName().substring(12))).list();
+    }
 }

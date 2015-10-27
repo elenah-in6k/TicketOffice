@@ -17,12 +17,17 @@ public class TicketOfficeImpl implements TicketOffice {
         flights = flightFactory.createFlightsList();
     }
 
+//    public FlightImpl searchFlight(FlightOptions flightOptions) {
+////        if (flights.size() == 0) return null;
+////        for (FlightImpl flightImpl : flights) {
+////            if (flightOptions.test(flightImpl))
+////                return flightImpl;
+////        }
+////        return null;
+//    }
+
+    @Override
     public FlightImpl searchFlight(FlightOptions flightOptions) {
-        if (flights.size() == 0) return null;
-        for (FlightImpl flightImpl : flights) {
-            if (flightOptions.test(flightImpl))
-                return flightImpl;
-        }
         return null;
     }
 

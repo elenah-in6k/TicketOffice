@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
  * Created by employee on 10/23/15.
  */
 @Entity
+@Table(name="Flight")
 public class Flight implements Serializable {
     @Id
     @Column(name = "id")
@@ -72,7 +73,8 @@ public class Flight implements Serializable {
     }
 
     public boolean isNearDate(LocalDate nearDate){
-        return (dateTime.toLocalDate().isAfter(LocalDate.now())) & (dateTime.toLocalDate().isBefore(nearDate));
+        return (dateTime.toLocalDate().isAfter(LocalDate.now())) &
+                (dateTime.toLocalDate().isBefore(nearDate));
     }
     public int getNumberOfEmptyPlaces(){
         return numberOfPlace - getNumberOfReservedPlace();
