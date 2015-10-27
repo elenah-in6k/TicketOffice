@@ -42,14 +42,14 @@ public class App {
 //        FlightDao fDao = (FlightDao)context.getBean("flightDao");
 //        List<Flight> flights = fDao.getAll();
 //        for(Flight f: flights){
-//            System.out.println(f.getIdFlight() + " " + f.getName() + " " + f.getDateTime());
+//            System.out.println(f.getId() + " " + f.getName() + " " + f.getDateTime());
 //        }
 //        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
 //        java.util.Date date = sdf1.parse("2015-11-28");
 //        java.sql.Date sqlStartDate = new java.sql.Date(date.getTime());
 //        flights = fDao.findByDate(sqlStartDate, 5);
 //            for(Flight f: flights){
-//                System.out.println(f.getIdFlight() + " " + f.getName() + " " + f.getDateTime());
+//                System.out.println(f.getId() + " " + f.getName() + " " + f.getDateTime());
 //            }
 
 //

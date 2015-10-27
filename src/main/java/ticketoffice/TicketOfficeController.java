@@ -30,6 +30,11 @@ public class TicketOfficeController {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 new String[] {"bean.xml"}, true);
         FlightDao fDao = (FlightDao)context.getBean("flightDao");
+        List<Flight> flightss = fDao.getAll();
+        for(Flight f: flightss){
+            printer.printFlightInfo(f);
+            //System.out.println(f.getId() + " " + f.getName() + " " + f.getDateTime());
+        }
         List<Flight> flights = fDao.findByDate(flightOptions.date, flightOptions.numberOfTicket, flightOptions.city);
        // Flight flight = ticketOffice.searchFlight();
      hasSearchFlight(flights);
@@ -37,8 +42,11 @@ public class TicketOfficeController {
     }
 
     public void hasSearchFlight(List<Flight> flight) {
-        if (flight != null) {
-            for (Flight f: flight){
+        if (!flight.isEmpty()) {
+            for ( Object o: flight){
+
+                ((Flight)o).getId();
+                Flight f = ((Flight)o);
                 printer.printFlightInfo(f);
             }
 

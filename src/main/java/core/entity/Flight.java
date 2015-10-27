@@ -3,9 +3,7 @@ package core.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 /**
  * Created by employee on 10/23/15.
@@ -16,7 +14,7 @@ public class Flight implements Serializable {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idFlight;
+    private int id;
 
     @Column(name = "name")
     private String name;
@@ -55,19 +53,19 @@ public class Flight implements Serializable {
         return numberOfReservedPlace;
 //        "select count(t.id)"+
 //        "from Ticket t, Flight f "+
-//        "where (t.idFlight = f.id)and(t.reserved = true)"
+//        "where (t.id = f.id)and(t.reserved = true)"
     }
 
     public void setId() {
-        this.idFlight = 1;
+        this.id = 1;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getIdFlight() {
-        return idFlight;
+    public int getId() {
+        return id;
     }
 
     public String getName() {

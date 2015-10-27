@@ -43,7 +43,7 @@ public class PrinterImpl implements Printer  {
     public void printFlightInfo(Flight flight) {
         printStream.println("Flight: ");
         printStream.println("DateTime: "+ flight.getDateTime());
-        printStream.println("City: "+ flight.getIdCity());
+        printStream.println("City: "+ flight.getName());
         printStream.println("NumberOfPlace: "+ flight.getNumberOfEmptyPlaces()+"\n");
 
     }

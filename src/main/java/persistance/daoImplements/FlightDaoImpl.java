@@ -28,11 +28,12 @@ public class FlightDaoImpl extends GenericDaoImpl<Flight,Integer> implements Fli
 
     public List<Flight> findByDate(Date dateTime, int numberOfTiket, City city) {
         return this.sessionFactory.getCurrentSession()
-                .createQuery(String.format("from Flight f, City c\n" +
-                        "where (f.dataTime > CURDATE())and" +
+                .createQuery(String.format("select f.id,f.dateTime,f.idCity, f.name,   f.numberOfPlace, f.numberOfReservedPlace" +
+                                " from Flight f, City c\n" +
+                        "where (f.dateTime > CURDATE())and" +
                         "(f.dateTime <= '%s')and" +
                         "((f.numberOfPlace - f.numberOfReservedPlace) >= %s )and" +
-                        "(f.idCity = c.id)and(c.name = %s)",
+                        "(f.idCity = c.id)and(c.name = '%s')",
                         dateTime, numberOfTiket, city.getName())).list();
 
     }
