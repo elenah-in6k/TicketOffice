@@ -2,6 +2,7 @@ package persistance.daoImplements;
 
 import core.daoInterface.GenericDao;
 import org.hibernate.SessionFactory;
+import org.hibernate.internal.util.SerializationHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.io.Serializable;
@@ -17,6 +18,7 @@ public abstract class GenericDaoImpl<T, PK extends Serializable>
     @Autowired
     protected SessionFactory sessionFactory;
     public final Class<T> entityClass;
+     ;
 
 
     public GenericDaoImpl(Class<T> entityClass) {
@@ -29,7 +31,7 @@ public abstract class GenericDaoImpl<T, PK extends Serializable>
     }
 
     public List<T> read(int id, String nameField) {
-        return this.sessionFactory.getCurrentSession().createQuery(String.format("from %s where %s = %s ", entityClass.getName().substring(12), nameField, "" + id)).list();
+        return sessionFactory.getCurrentSession().createQuery(String.format("from %s where %s = %s ", SerializationHelper.serialize(entityClass.getName().substring(12)), nameField, "" + id)).list();
         //;
     }
 
@@ -46,6 +48,6 @@ public abstract class GenericDaoImpl<T, PK extends Serializable>
         sessionFactory.getCurrentSession().persist(t);
     }
     public List<T> getAll(){
-        return this.sessionFactory.getCurrentSession().createQuery(String.format("from %s", entityClass.getName().substring(12))).list();
+        return  sessionFactory.getCurrentSession().createQuery(String.format("from %s", entityClass.getName().substring(12))).list();
     }
 }

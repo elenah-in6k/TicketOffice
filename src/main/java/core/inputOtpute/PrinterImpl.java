@@ -21,7 +21,7 @@ public class PrinterImpl implements Printer  {
     }
 
     public void printInputDateMessage(){
-        printStream.print("Input date in format dd.mm.yyyy: ");
+        printStream.print("Input date in format yyyy-mm-dd: ");
     }
 
     public void printInputTicketMessage() {
@@ -41,9 +41,10 @@ public class PrinterImpl implements Printer  {
     }
 
     public void printFlightInfo(Flight flight) {
-        printStream.println("ticketoffice.oldclasses.FlightImpl: ");
+        printStream.println("Flight: ");
         printStream.println("DateTime: "+ flight.getDateTime());
         printStream.println("City: "+ flight.getIdCity());
+        printStream.println("NumberOfPlace: "+ flight.getNumberOfEmptyPlaces()+"\n");
 
     }
 }

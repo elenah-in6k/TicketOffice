@@ -14,9 +14,9 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/ticketoffice" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/TicketOffice" />
         <property name="username" value="root" />
-        <property name="password" value="root" />
+        <property name="password" value="masterkey" />
     </bean>
 
     <bean id="sessionFactory"
@@ -53,6 +53,7 @@
         </constructor-arg>
 
     </bean>
+
     <bean id="ticketDao" class="persistance.daoImplements.TicketDaoImpl">
         <constructor-arg>
             <value>core.entity.Ticket</value>

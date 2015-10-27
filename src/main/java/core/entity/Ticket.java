@@ -22,7 +22,7 @@ public class Ticket implements Serializable {
 
     @Column(name = "reserved")
     private boolean reserved = false;
-
+    Ticket(){}
     public void setIdTicket(int idTicket) {
         this.idTicket = idTicket;
     }

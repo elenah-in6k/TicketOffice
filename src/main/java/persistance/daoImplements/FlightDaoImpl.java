@@ -1,12 +1,19 @@
 package persistance.daoImplements;
 
-import core.entity.Flight;
 import core.daoInterface.FlightDao;
+import core.entity.City;
+import core.entity.Flight;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
+import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
+import java.time.ZoneId;
+
 import java.util.List;
 
 /**
@@ -19,10 +26,15 @@ public class FlightDaoImpl extends GenericDaoImpl<Flight,Integer> implements Fli
         super(entityClass);
     }
 
-    public List<Flight> findByDate(LocalDateTime dateTime) {
+    public List<Flight> findByDate(Date dateTime, int numberOfTiket, City city) {
         return this.sessionFactory.getCurrentSession()
-                .createQuery(String.format("from Flight\n" +
-                        "where (dataTime > CURDATE())and(dataTime <= '%s')", dateTime.toLocalDate())).list();
+                .createQuery(String.format("from Flight f, City c\n" +
+                        "where (f.dataTime > CURDATE())and" +
+                        "(f.dateTime <= '%s')and" +
+                        "((f.numberOfPlace - f.numberOfReservedPlace) >= %s )and" +
+                        "(f.idCity = c.id)and(c.name = %s)",
+                        dateTime, numberOfTiket, city.getName())).list();
+
     }
 
 }

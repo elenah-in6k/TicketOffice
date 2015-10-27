@@ -4,6 +4,8 @@ import core.entity.City;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -23,19 +25,21 @@ public class InputOptionsImpl implements InputOptions {
         this.printerImpl = printerImpl;
     }
 
-    public FlightOptions readSearchOptions() {
+    public FlightOptions readSearchOptions()throws ParseException {
         read();
         printerImpl.printInputDateMessage();
-        LocalDate date = LocalDate.parse(inputOptions.next(),
-                DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-
+//        LocalDate date = LocalDate.parse(inputOptions.next(),
+//                DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date date = sdf1.parse(inputOptions.next());
+        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
         printerImpl.printInputTicketMessage();
         int numberOfTicket = Integer.parseInt(inputOptions.next());
 
         printerImpl.printInputCityMessage();
         String nameCity = inputOptions.next();
         City city = new City(nameCity);
-        return new FlightOptions(date, numberOfTicket, city);
+        return new FlightOptions(sqlDate, numberOfTicket, city);
 
 //        return  new core.inputOtpute.FlightOptions(LocalDate.parse("30.11.2015",
 //               DateTimeFormatter.ofPattern("dd.MM.yyyy")), 1, city);
