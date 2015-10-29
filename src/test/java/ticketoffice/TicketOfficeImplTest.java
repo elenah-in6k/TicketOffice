@@ -1,12 +1,14 @@
 package ticketoffice;
 
-import core.inputOtpute.FlightOptions;
+import core.inputOutput.FlightOptions;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import ticketoffice.oldclasses.City;
-import ticketoffice.oldclasses.Flight;
-import ticketoffice.oldclasses.FlightImpl;
+import ticketofficeOld.TicketOffice;
+import ticketofficeOld.oldclasses.City;
+import ticketofficeOld.oldclasses.Flight;
+import ticketofficeOld.oldclasses.FlightImpl;
+import ticketofficeOld.oldclasses.TicketOfficeImpl;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

@@ -1,7 +1,6 @@
 package core.entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.sql.Date;
 import java.time.LocalDate;
 
@@ -10,7 +9,7 @@ import java.time.LocalDate;
  */
 @Entity
 @Table(name="Flight")
-public class Flight implements Serializable {
+public class Flight{
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,8 +18,19 @@ public class Flight implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "idCity")
-    private int idCity;
+//    @ManyToOne
+//    @JoinTable
+//            (
+//                    name="idCity",
+//                    joinColumns={ @JoinColumn(name="idCity", referencedColumnName="idCity") },
+//                    inverseJoinColumns={ @JoinColumn(name="id", referencedColumnName="id", unique=true) }
+//            )
+
+//    @Column(name = "idCity")
+//    private int idCity;
+    @ManyToOne
+    @JoinColumn(name = "idCity")
+    private City city;
 
     @Column(name = "dateTime")
     private Date dateTime;
@@ -30,15 +40,16 @@ public class Flight implements Serializable {
 
     @Column(name = "numberOfReservedPlace")
     private int numberOfReservedPlace;
+
     Flight(){}
-    Flight(String name, int idCity, Date dateTime, int numberOfPlace){
+    public Flight( Date dateTime, String name,   int numberOfPlace){
         this.name = name;
-        this.idCity = idCity;
         this.dateTime = dateTime;
         this.numberOfPlace = numberOfPlace;
+
     }
-    public int getIdCity() {
-        return idCity;
+    public City getCity() {
+        return city;
     }
 
     public Date getDateTime() {
@@ -80,5 +91,8 @@ public class Flight implements Serializable {
     public int getNumberOfEmptyPlaces(){
         return numberOfPlace - getNumberOfReservedPlace();
     }
+    public Flight getFlight (Object o){
 
+        return null;
+    }
 }

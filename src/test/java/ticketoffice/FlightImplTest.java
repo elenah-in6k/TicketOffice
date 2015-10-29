@@ -1,14 +1,6 @@
 package ticketoffice;
 
 import org.junit.Ignore;
-import org.junit.Test;
-import ticketoffice.oldclasses.City;
-import ticketoffice.oldclasses.FlightImpl;
-import ticketoffice.oldclasses.Ticket;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;

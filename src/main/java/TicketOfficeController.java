@@ -1,13 +1,10 @@
-import core.daoInterface.FlightDao;
+import core.entity.City;
 import core.entity.Flight;
-import core.inputOtpute.FlightOptions;
-import core.inputOtpute.InputOptions;
-import core.inputOtpute.Printer;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import core.inputOutput.FlightOptions;
+import core.inputOutput.InputOptions;
+import core.inputOutput.Printer;
 
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 
@@ -19,40 +16,39 @@ public class TicketOfficeController {
     private final InputOptions input;
 
     private final Printer printer;
+    private final ServiceTicketOffice service;
 
-    public TicketOfficeController(InputOptions input, Printer printer) {
+    public TicketOfficeController(InputOptions input, Printer printer, ServiceTicketOffice service) {
         this.input = input;
         this.printer = printer;
+        this.service = service;
+        //TicketOffice t = new TicketOffice()
     }
 
-    public void openTicketOffice()throws ParseException {
-        FlightOptions flightOptions = input.readSearchOptions();
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                new String[] {"bean.xml"}, true);
-        FlightDao fDao = (FlightDao)context.getBean("flightDao");
-        List<Flight> flightss = fDao.getAll();
-        for(Flight f: flightss){
+    public void openTicketOffice() throws ParseException  {
+
+
+        List<Flight> flightss = service.getAllFlights();
+        for (Flight f : flightss) {
             printer.printFlightInfo(f);
-            //System.out.println(f.getId() + " " + f.getName() + " " + f.getDateTime());
         }
-        List<Flight> flights = fDao.findByDate(flightOptions.date, flightOptions.numberOfTicket, flightOptions.city);
-       // Flight flight = ticketOffice.searchFlight();
-      //  hasSearchFlight(flights);
-        //printer.printTicket(flight.buyTicket());
+        List<City> allCity = service.getAllCity();
+
+        for (City o : allCity) {
+            System.out.println(o.getId() + " " + o.getName());
+        }
+        FlightOptions flightOptions = input.readSearchOptions();
+        List<Flight> flights = service.findFlights(flightOptions);
+
+        hasSearchFlight(flights);
+
     }
 
     public void hasSearchFlight(List<Flight> flights) {
-//         List<Flight> list = new LinkedList<>();
-//        for( Object o : flights) {
-//            list.add((Flight)o);
-//        }
-
         if (!flights.isEmpty()) {
-            for ( Flight o: flights){
-
+            for (Flight o : flights) {
                 printer.printFlightInfo(o);
             }
-
         } else {
             printer.printSorryMessage();
         }

@@ -1,53 +1,74 @@
 package persistance.daoImplements;
 
 import core.daoInterface.GenericDao;
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.internal.util.SerializationHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.io.Serializable;
+
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
 @Service("genericDaoImpl")
 @Transactional
-public abstract class GenericDaoImpl<T, PK extends Serializable>
-        implements GenericDao<T, PK> {
+public abstract class GenericDaoImpl<T>
+        implements GenericDao<T> {
 
     @Autowired
     protected SessionFactory sessionFactory;
-    public final Class<T> entityClass;
-     ;
+    public Class<T> entityClass;
 
+    public GenericDaoImpl() {
+        Class<T> clazz;
+        try {
+            clazz = getClassType();
+        } catch (Exception e) {
+            clazz = null;
+        }
+        this.entityClass = clazz;
+    }
 
-    public GenericDaoImpl(Class<T> entityClass) {
-        this.entityClass = entityClass;
+    @SuppressWarnings("unchecked")
+    private Class<T> getClassType() {
+        return (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
     }
 
     public T create(T t) {
-        sessionFactory.getCurrentSession().persist(t);
+        getSession().persist(t);
         return t;
     }
 
-    public List<T> read(int id, String nameField) {
-        return sessionFactory.getCurrentSession().createQuery(String.format("from %s where %s = %s ", SerializationHelper.serialize(entityClass.getName().substring(12)), nameField, "" + id)).list();
-        //;
+    public T read(int id) {
+        return getSession().get(entityClass, id);
     }
 
     public void update(T t) {
-       this.sessionFactory.getCurrentSession().update(t);
+       getSession().update(t);
     }
 
     public void delete(T t) {
-        this.sessionFactory.getCurrentSession().merge(t);
-        this.sessionFactory.getCurrentSession().delete(t);
+        getSession().merge(t);
+        getSession().delete(t);
+    }
+
+    protected Session getSession() {
+        return this.sessionFactory.getCurrentSession();
     }
 
     public void save(T t) {
-        sessionFactory.getCurrentSession().persist(t);
+        getSession().persist(t);
     }
+
+    protected Query createQuery(String q) {
+        Query query = getSession().createQuery(q);
+        return query;
+    }
+
+    @SuppressWarnings("unchecked")
     public List<T> getAll(){
-        return  sessionFactory.getCurrentSession().createQuery(String.format("from %s", entityClass.getName().substring(12))).list();
+        return getSession().createCriteria(entityClass).list();
     }
 }

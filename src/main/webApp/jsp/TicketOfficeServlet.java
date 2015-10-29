@@ -1,5 +1,13 @@
 /**
  * Created by employee on 10/28/15.
  */
-public class TicketOfficeServlet extends HttpServlet {
+class TicketOfficeServlet extends HttpServlet {
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+
+    }
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    }
 }

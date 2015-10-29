@@ -8,7 +8,7 @@ import java.io.Serializable;
  * Created by Алена on 25.10.2015.
  */
 @Entity
-public class Ticket implements Serializable {
+public class Ticket{
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,12 @@ public class Ticket implements Serializable {
     @Column(name = "reserved")
     private boolean reserved = false;
     Ticket(){}
+
+    Ticket(int idFlight,int numberOfPlace){
+        this.idFlight = idFlight;
+        this.numberOfPlace = numberOfPlace;
+    }
+
     public void setIdTicket(int idTicket) {
         this.idTicket = idTicket;
     }

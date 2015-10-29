@@ -1,13 +1,7 @@
 package ticketoffice;
 
-import core.inputOtpute.InputOptionsImpl;
-import core.inputOtpute.Printer;
-import core.inputOtpute.PrinterImpl;
 import org.junit.Ignore;
 import org.junit.Test;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;

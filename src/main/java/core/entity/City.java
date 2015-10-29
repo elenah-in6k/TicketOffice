@@ -8,15 +8,19 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name="City")
-public class City implements Serializable {
+public class City {
     @Id
+
     @Column(name = "id")
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name", length = 100, nullable = false)
     private String name;
+
+
     public City(){}
+
     public City(String name){
         this.name = name;
     }

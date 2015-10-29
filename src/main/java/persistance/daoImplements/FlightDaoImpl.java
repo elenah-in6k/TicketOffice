@@ -4,16 +4,11 @@ import core.daoInterface.FlightDao;
 import core.entity.City;
 import core.entity.Flight;
 
+import org.hibernate.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-import java.sql.Date;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-import java.time.ZoneId;
-
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,21 +16,19 @@ import java.util.List;
  */
 @Service("flightDao")
 @Transactional
-public class FlightDaoImpl extends GenericDaoImpl<Flight,Integer> implements FlightDao {
-    public FlightDaoImpl(Class<Flight> entityClass) {
-        super(entityClass);
+public class FlightDaoImpl extends GenericDaoImpl<Flight> implements FlightDao {
+    public FlightDaoImpl() {
+        super();
     }
 
-    public List<Flight> findByDate(Date dateTime, int numberOfTiket, City city) {
-        return this.sessionFactory.getCurrentSession()
-                .createQuery(String.format("select f.id,f.dateTime,f.idCity, f.name,   f.numberOfPlace, f.numberOfReservedPlace" +
-                                " from Flight f, City c\n" +
-                        "where (f.dateTime > CURDATE())and" +
-                        "(f.dateTime <= '%s')and" +
-                        "((f.numberOfPlace - f.numberOfReservedPlace) >= %s )and" +
-                        "(f.idCity = c.id)and(c.name = '%s')",
-                        dateTime, numberOfTiket, city.getName())).list();
+    public List<Flight> findByDate(Date dateTime, int numberOfTicket, City city) {
+        Query query = getSession()
+                .createQuery("from core.entity.Flight where (dateTime > :today)and (dateTime <= :date)and ((numberOfPlace - numberOfReservedPlace) >= :tickets )and (City = :city)");
+        query.setParameter("today", new Date());
+        query.setParameter("date", dateTime);
+        query.setParameter("tickets", numberOfTicket);
+        query.setParameter("city", city);
 
+        return query.list();
     }
-
 }

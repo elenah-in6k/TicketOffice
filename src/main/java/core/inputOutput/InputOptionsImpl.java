@@ -15,26 +15,27 @@ public class InputOptionsImpl implements InputOptions {
 
     InputStream input;
     Scanner inputOptions;
-    Printer printerImpl;
+    Printer printer;
 
-    public InputOptionsImpl(InputStream inputStream, Printer printerImpl) {
+    public InputOptionsImpl(InputStream inputStream, Printer printer) {
         input = inputStream;
         inputOptions = new Scanner(input);
-        this.printerImpl = printerImpl;
+        this.printer = printer;
     }
 
     public FlightOptions readSearchOptions()throws ParseException {
+        printer.printHelloMessage();
         read();
-        printerImpl.printInputDateMessage();
+        printer.printInputDateMessage();
 //        LocalDate date = LocalDate.parse(inputOptions.next(),
 //                DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         java.util.Date date = sdf1.parse(inputOptions.next());
         java.sql.Date sqlDate = new java.sql.Date(date.getTime());
-        printerImpl.printInputTicketMessage();
+        printer.printInputTicketMessage();
         int numberOfTicket = Integer.parseInt(inputOptions.next());
 
-        printerImpl.printInputCityMessage();
+        printer.printInputCityMessage();
         String nameCity = inputOptions.next();
         City city = new City(nameCity);
         return new FlightOptions(sqlDate, numberOfTicket, city);

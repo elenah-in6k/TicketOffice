@@ -1,6 +1,6 @@
 package ticketofficeOld.oldclasses;
 
-import core.inputOtpute.FlightOptions;
+import core.inputOutput.FlightOptions;
 import ticketofficeOld.FlightFactory;
 import ticketofficeOld.TicketOffice;
 
