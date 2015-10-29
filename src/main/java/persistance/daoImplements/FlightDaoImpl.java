@@ -28,7 +28,6 @@ public class FlightDaoImpl extends GenericDaoImpl<Flight> implements FlightDao {
         query.setParameter("date", dateTime);
         query.setParameter("tickets", numberOfTicket);
         query.setParameter("city", city);
-
         return query.list();
     }
 }
