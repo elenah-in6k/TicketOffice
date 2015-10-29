@@ -1,4 +1,4 @@
-package core.inputOtpute;
+package core.inputOutput;
 
 import core.entity.City;
 
@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 /**
@@ -41,7 +39,7 @@ public class InputOptionsImpl implements InputOptions {
         City city = new City(nameCity);
         return new FlightOptions(sqlDate, numberOfTicket, city);
 
-//        return  new core.inputOtpute.FlightOptions(LocalDate.parse("30.11.2015",
+//        return  new core.inputOutput.FlightOptions(LocalDate.parse("30.11.2015",
 //               DateTimeFormatter.ofPattern("dd.MM.yyyy")), 1, city);
     }
 

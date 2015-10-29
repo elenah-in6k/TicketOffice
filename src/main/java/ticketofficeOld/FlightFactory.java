@@ -1,7 +1,7 @@
-package ticketoffice;
+package ticketofficeOld;
 
-import ticketoffice.oldclasses.City;
-import ticketoffice.oldclasses.FlightImpl;
+import ticketofficeOld.oldclasses.City;
+import ticketofficeOld.oldclasses.FlightImpl;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

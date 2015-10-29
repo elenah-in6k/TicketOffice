@@ -1,11 +1,8 @@
-package core.inputOtpute;
+package core.inputOutput;
 
 import core.entity.City;
-import core.entity.Flight;
 
 import java.sql.Date;
-import java.sql.Timestamp;
-import java.time.LocalDate;
 
 /**
  * Created by employee on 10/21/15.

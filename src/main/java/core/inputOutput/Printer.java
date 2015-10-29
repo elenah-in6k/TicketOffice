@@ -1,4 +1,4 @@
-package core.inputOtpute;
+package core.inputOutput;
 
 import core.entity.Flight;
 import core.entity.Ticket;

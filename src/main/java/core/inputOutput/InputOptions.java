@@ -1,4 +1,4 @@
-package core.inputOtpute;
+package core.inputOutput;
 
 import java.text.ParseException;
 

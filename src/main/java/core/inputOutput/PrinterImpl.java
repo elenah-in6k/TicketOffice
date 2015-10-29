@@ -1,4 +1,4 @@
-package core.inputOtpute;
+package core.inputOutput;
 
 
 import core.entity.Flight;
@@ -44,7 +44,7 @@ public class PrinterImpl implements Printer  {
         printStream.println("Flight: ");
         printStream.println("DateTime: "+ flight.getDateTime());
         printStream.println("City: "+ flight.getName());
-        printStream.println("NumberOfPlace: "+ flight.getNumberOfEmptyPlaces()+"\n");
+        printStream.println("NumberOfEmptyPlace: "+ flight.getNumberOfEmptyPlaces()+"\n");
 
     }
 }

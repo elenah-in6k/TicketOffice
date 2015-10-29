@@ -1,5 +1,3 @@
-package ticketoffice;
-
 import core.daoInterface.FlightDao;
 import core.entity.Flight;
 import core.inputOtpute.FlightOptions;
@@ -8,6 +6,8 @@ import core.inputOtpute.Printer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -37,17 +37,20 @@ public class TicketOfficeController {
         }
         List<Flight> flights = fDao.findByDate(flightOptions.date, flightOptions.numberOfTicket, flightOptions.city);
        // Flight flight = ticketOffice.searchFlight();
-     hasSearchFlight(flights);
+      //  hasSearchFlight(flights);
         //printer.printTicket(flight.buyTicket());
     }
 
-    public void hasSearchFlight(List<Flight> flight) {
-        if (!flight.isEmpty()) {
-            for ( Object o: flight){
+    public void hasSearchFlight(List<Flight> flights) {
+//         List<Flight> list = new LinkedList<>();
+//        for( Object o : flights) {
+//            list.add((Flight)o);
+//        }
 
-                ((Flight)o).getId();
-                Flight f = ((Flight)o);
-                printer.printFlightInfo(f);
+        if (!flights.isEmpty()) {
+            for ( Flight o: flights){
+
+                printer.printFlightInfo(o);
             }
 
         } else {
