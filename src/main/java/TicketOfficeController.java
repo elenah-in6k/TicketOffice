@@ -37,10 +37,10 @@ public class TicketOfficeController {
         for (City o : allCity) {
             System.out.println(o.getId() + " " + o.getName());
         }
-        FlightOptions flightOptions = input.readSearchOptions();
-        List<Flight> flights = service.findFlights(flightOptions);
-
-        hasSearchFlight(flights);
+//        FlightOptions flightOptions = input.readSearchOptions();
+//        List<Flight> flights = service.findFlights(flightOptions);
+//
+//        hasSearchFlight(flights);
 
     }
 
