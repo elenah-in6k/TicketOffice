@@ -46,4 +46,42 @@
         <url-pattern>/flight</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SearchFlightFormServlet</servlet-name>
+        <servlet-class>servlet.SearchFlightFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchFlightFormServlet</servlet-name>
+        <url-pattern>/searchFlight</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchFlightServlet</servlet-name>
+        <servlet-class>servlet.SearchFlightServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchFlightServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>mainServlet</servlet-name>
+        <servlet-class>servlet.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>searchByCityServlet</servlet-name>
+        <servlet-class>servlet.SearchFlightByCityServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>searchByCityServlet</servlet-name>
+        <url-pattern>/searchByCity</url-pattern>
+    </servlet-mapping>
 </web-app>

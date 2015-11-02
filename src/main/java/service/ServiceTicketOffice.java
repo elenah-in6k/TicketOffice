@@ -4,6 +4,7 @@ import core.entity.City;
 import core.entity.Flight;
 import core.inputOutput.FlightOptions;
 
+import java.sql.Date;
 import java.text.ParseException;
 import java.util.List;
 
@@ -24,13 +25,16 @@ public class ServiceTicketOffice {
         return ticketOffice.flightDao.getAll();
     }
 
-    public List<Flight> findFlights(FlightOptions flightOptions) {
-        return ticketOffice.flightDao.findByDate(flightOptions.date, flightOptions.numberOfTicket);
+    public List<Flight> findFlights(Date date, int numberOfTicket) {
+        return ticketOffice.flightDao.findByDate(date, numberOfTicket);
 
     }
-    public List<Flight> findFlightsToCity(FlightOptions flightOptions) {
-        return ticketOffice.flightDao.findByDate(flightOptions.date, flightOptions.numberOfTicket);
+    public List<Flight> findFlightsToCity(int city) {
+        return ticketOffice.flightDao.findByCity(city);
 
+    }
+    public List<Flight> findByDateCityPlace(Date date, int numberOfTicket, int idCity){
+        return ticketOffice.flightDao.findByDateCityPlace(date, numberOfTicket, idCity);
     }
 
 }

@@ -1,7 +1,6 @@
 package persistance.daoImplements;
 
 import core.daoInterface.FlightDao;
-import core.entity.City;
 import core.entity.Flight;
 
 import org.hibernate.Query;
@@ -27,7 +26,23 @@ public class FlightDaoImpl extends GenericDaoImpl<Flight> implements FlightDao {
         query.setParameter("today", new Date());
         query.setParameter("date", dateTime);
         query.setParameter("tickets", numberOfTicket);
-      //  query.setParameter("city", city);
+      //  query.setParameter("idCity", idCity);
+        return query.list();
+    }
+    public List<Flight> findByCity(int idCity){
+        Query query = getSession()
+                .createQuery("from core.entity.Flight where (idCity = :idCity)");
+        query.setParameter("idCity", idCity);
+        return query.list();
+    }
+
+    public List<Flight> findByDateCityPlace(Date dateTime, int numberOfTicket, int idCity) {
+        Query query = getSession()
+                .createQuery("from core.entity.Flight where (dateTime > :today)and (dateTime <= :date)and ((numberOfPlace - numberOfReservedPlace) >= :tickets )and(idCity = :idCity)");
+        query.setParameter("today", new Date());
+        query.setParameter("date", dateTime);
+        query.setParameter("tickets", numberOfTicket);
+        query.setParameter("idCity", idCity);
         return query.list();
     }
 }

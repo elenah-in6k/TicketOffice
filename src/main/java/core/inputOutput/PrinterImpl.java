@@ -1,10 +1,12 @@
 package core.inputOutput;
 
 
+import core.entity.City;
 import core.entity.Flight;
 import core.entity.Ticket;
 
 import java.io.PrintStream;
+import java.util.List;
 
 /**
  * Created by employee on 10/21/15.
@@ -46,5 +48,15 @@ public class PrinterImpl implements Printer  {
         printStream.println("City: "+ flight.getCity().getName());
         printStream.println("NumberOfEmptyPlace: "+ flight.getNumberOfEmptyPlaces()+"\n");
 
+    }
+
+    @Override
+    public String printFlight(List<Flight> flight) {
+        return null;
+    }
+
+    @Override
+    public String printCity(List<City> cities) {
+        return null;
     }
 }

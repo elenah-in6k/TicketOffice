@@ -1,7 +1,10 @@
 package core.inputOutput;
 
+import core.entity.City;
 import core.entity.Flight;
 import core.entity.Ticket;
+
+import java.util.List;
 
 
 /**
@@ -15,4 +18,7 @@ public interface Printer {
     void printSorryMessage();
     void printTicket(Ticket ticket);
     void printFlightInfo(Flight flight);
+    String printFlight(List<Flight> flight);
+    String printCity(List<City> cities);
+
 }

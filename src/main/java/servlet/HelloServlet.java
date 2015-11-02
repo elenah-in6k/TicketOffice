@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 /**
  * Created by employee on 10/28/15.
  */
-public class HelloServlet extends HttpServlet {
+public class HelloServlet extends GeneralServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

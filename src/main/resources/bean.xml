@@ -59,6 +59,9 @@
     <bean id = "printer" class  = "core.inputOutput.PrinterImpl">
         <constructor-arg ref = "systemOut"/>
     </bean>
+    <bean id = "htmlPrinter" class  = "core.inputOutput.HtmlPrinter">
+    </bean>
+
     <bean id = "inputOptions" class  = "core.inputOutput.InputOptionsImpl">
         <constructor-arg ref = "systemIn"/>
         <constructor-arg ref = "printer"/>

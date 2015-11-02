@@ -4,8 +4,9 @@
     <title>Ticket Office</title>
 </head>
 <body>
-<a href="/hello">Hello1111;)))</a>
-<a href="/city">Get all cities</a>
-<a href="/flight">Get all flights</a>
+<a href="hello">Hello1111;)))</a>
+<a href="city">Get all cities</a>
+<a href="flight">Get all flights</a>
+<a href="searchFlight">Search flights</a>
 </body>
 </html>

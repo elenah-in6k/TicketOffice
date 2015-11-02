@@ -40,9 +40,10 @@ public class FlightServlet extends HttpServlet {
         }
 
         out.print(getFlightsTable(flights));
+
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    public void doPost(HttpServletRequest req, HttpServletResponse response) throws IOException {
 
     }
 
@@ -51,7 +52,7 @@ public class FlightServlet extends HttpServlet {
                 "<title>Flights</title>" +
                 "</head>" +
                 "<body>" +
-                "<h1>City</h1>" + "<table width=\"100%\">";
+                "<h1>Flights</h1>" + "<table width=\"100%\">";
         outHtml += "<tr>";
         outHtml += "<td>" + "Name" + "</td>";
         outHtml += "<td>" + "DateTime" + "</td>";
