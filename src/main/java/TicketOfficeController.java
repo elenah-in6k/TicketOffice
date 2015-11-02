@@ -1,8 +1,8 @@
 import core.entity.City;
 import core.entity.Flight;
-import core.inputOutput.FlightOptions;
 import core.inputOutput.InputOptions;
 import core.inputOutput.Printer;
+import service.ServiceTicketOffice;
 
 import java.text.ParseException;
 import java.util.List;
@@ -22,7 +22,7 @@ public class TicketOfficeController {
         this.input = input;
         this.printer = printer;
         this.service = service;
-        //TicketOffice t = new TicketOffice()
+        //service.TicketOffice t = new service.TicketOffice()
     }
 
     public void openTicketOffice() throws ParseException  {

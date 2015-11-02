@@ -6,6 +6,16 @@
     http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
 
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:bean.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>helloServlet</servlet-name>
         <servlet-class>servlet.HelloServlet</servlet-class>
@@ -14,6 +24,26 @@
     <servlet-mapping>
         <servlet-name>helloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>CityServlet</servlet-name>
+    <servlet-class>servlet.CityServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>CityServlet</servlet-name>
+    <url-pattern>/city</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FlightServlet</servlet-name>
+        <servlet-class>servlet.FlightServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FlightServlet</servlet-name>
+        <url-pattern>/flight</url-pattern>
     </servlet-mapping>
 
 </web-app>

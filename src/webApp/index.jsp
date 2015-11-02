@@ -4,7 +4,8 @@
     <title>Ticket Office</title>
 </head>
 <body>
-<a href="/hello">Hello;)))</a>
-
+<a href="/hello">Hello1111;)))</a>
+<a href="/city">Get all cities</a>
+<a href="/flight">Get all flights</a>
 </body>
 </html>

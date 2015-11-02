@@ -1,9 +1,8 @@
-import core.daoInterface.CityDao;
-import core.daoInterface.FlightDao;
+package service;
+
 import core.entity.City;
 import core.entity.Flight;
 import core.inputOutput.FlightOptions;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.text.ParseException;
 import java.util.List;
@@ -26,7 +25,12 @@ public class ServiceTicketOffice {
     }
 
     public List<Flight> findFlights(FlightOptions flightOptions) {
-        return ticketOffice.flightDao.findByDate(flightOptions.date, flightOptions.numberOfTicket, flightOptions.city);
+        return ticketOffice.flightDao.findByDate(flightOptions.date, flightOptions.numberOfTicket);
 
     }
+    public List<Flight> findFlightsToCity(FlightOptions flightOptions) {
+        return ticketOffice.flightDao.findByDate(flightOptions.date, flightOptions.numberOfTicket);
+
+    }
+
 }

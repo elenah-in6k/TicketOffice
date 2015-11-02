@@ -21,13 +21,13 @@ public class FlightDaoImpl extends GenericDaoImpl<Flight> implements FlightDao {
         super();
     }
 
-    public List<Flight> findByDate(Date dateTime, int numberOfTicket, City city) {
+    public List<Flight> findByDate(Date dateTime, int numberOfTicket) {
         Query query = getSession()
-                .createQuery("from core.entity.Flight where (dateTime > :today)and (dateTime <= :date)and ((numberOfPlace - numberOfReservedPlace) >= :tickets )and (City = :city)");
+                .createQuery("from core.entity.Flight where (dateTime > :today)and (dateTime <= :date)and ((numberOfPlace - numberOfReservedPlace) >= :tickets )");
         query.setParameter("today", new Date());
         query.setParameter("date", dateTime);
         query.setParameter("tickets", numberOfTicket);
-        query.setParameter("city", city);
+      //  query.setParameter("city", city);
         return query.list();
     }
 }

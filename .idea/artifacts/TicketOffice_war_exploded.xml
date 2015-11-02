@@ -30,6 +30,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
           <element id="library" level="project" name="Maven: javassist:javassist:3.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:3.0-alpha-1" />
           <element id="library" level="project" name="Maven: javax.servlet:jsp-api:2.0" />
         </element>

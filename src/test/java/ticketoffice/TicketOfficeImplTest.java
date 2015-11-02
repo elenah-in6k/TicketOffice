@@ -4,7 +4,7 @@
 //import org.junit.Before;
 //import org.junit.Ignore;
 //import org.junit.Test;
-//import ticketofficeOld.TicketOffice;
+//import ticketofficeOld.service.TicketOffice;
 //import ticketofficeOld.oldclasses.City;
 //import ticketofficeOld.oldclasses.Flight;
 //import ticketofficeOld.oldclasses.FlightImpl;
@@ -25,7 +25,7 @@
 //
 //    public static final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 //    public static final DateTimeFormatter DATETIME_FORMAT = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-//    private TicketOffice ticketOffice;
+//    private service.TicketOffice ticketOffice;
 //    private City lviv = new City("Lviv");
 //    private City kyiv = new City("Kyiv");
 //    private FlightOptions options;

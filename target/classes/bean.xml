@@ -48,7 +48,7 @@
     <bean id="ticketDao" class="persistance.daoImplements.TicketDaoImpl"/>
 
 
-    <bean id="ticketOffice" class = "TicketOffice">
+    <bean id="ticketOffice" class = "service.TicketOffice">
         <constructor-arg ref = "cityDao"/>
         <constructor-arg ref = "flightDao"/>
         <constructor-arg ref = "ticketDao"/>
@@ -64,7 +64,7 @@
         <constructor-arg ref = "printer"/>
     </bean>
 
-    <bean id = "service" class = "ServiceTicketOffice">
+    <bean id = "service" class = "service.ServiceTicketOffice">
     <constructor-arg ref = "ticketOffice"/>
     </bean>
 

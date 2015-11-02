@@ -1,3 +1,5 @@
+package service;
+
 import core.daoInterface.CityDao;
 import core.daoInterface.FlightDao;
 import core.daoInterface.TicketDao;
