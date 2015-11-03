@@ -28,32 +28,11 @@ public class SearchFlightFormServlet extends GeneralServlet {
 
         List<City> cities = service.getAllCity();
 
-        out.print(getForm(cities));
+        out.print(printer.getForm(cities));
 
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse response) throws IOException {
 
-    }
-    private String getForm( List<City> cities){
-        String outHtml = "<html>" + "<body>";
-        outHtml += "<form method=\"GET\" action=\"/search\">";
-        outHtml += "<label for=\"idCity\">City: </label>";
-        outHtml += "<select name=\"idCity\" id=\"idCity\">";
-        for (City city : cities) {
-            outHtml += "<option value=\"" + city.getId() + "\">" + city.getName() + "</option>";
-        }
-        outHtml += "</select>";
-        outHtml += "<br> <br>";
-        outHtml += "<label for=\"date\"> Date (yyyy-MM-dd): </label>";
-        outHtml += "<input type=\"text\" name=\"date\" id=\"date\">";
-        outHtml += "<br> <br>";
-        outHtml += "<label for=\"numberOfPlace\"> numberOfPlace: </label>";
-        outHtml += "<input type=\"text\" name=\"numberOfPlace\" id=\"numberOfPlace\">";
-        outHtml += "<br> <br>";
-//        outHtml += "<button type=\"submit\" method=\"GET\" action = \"/searchByCity\" form >searchByCity</button>";
-                outHtml += "<input type=\"submit\" name=\"searchFlight\" value=\"searchAllOptions\">";
-        outHtml += "</form></body>" + "</html>";
-        return outHtml;
     }
 }

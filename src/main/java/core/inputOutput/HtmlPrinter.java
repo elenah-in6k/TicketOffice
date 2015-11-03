@@ -12,32 +12,39 @@ import java.util.List;
 public class HtmlPrinter implements Printer {
 
 
+    private final String openRowTag = "<tr>";
+    private final String closeRowTag = "</tr>";
+    private final String openCellTag = "<td>";
+    private final String closeCellTag = "</td>";
+    private final String openHtmlTag = "<html>";
+    private final String closeHtmlTag = "</html>";
+
     @Override
     public String printFlight(List<Flight> flights) {
-        String outHtml = "<html>" + "<head>" +
+        String outHtml = openHtmlTag + "<head>" +
                 "<title>Flights</title>" +
                 "</head>" +
                 "<body>" +
                 "<h1>Flights</h1>" + "<table width=\"100%\">";
-        outHtml += "<tr>";
-        outHtml += "<td>" + "Name" + "</td>";
-        outHtml += "<td>" + "DateTime" + "</td>";
-        outHtml += "<td>" + "NumberOfPlace" + "</td>";
-        outHtml += "<td>" + "NumberOfEmptyPlaces" + "</td>";
-        outHtml += "<td>" + "CityName" + "</td>";
-        outHtml += "</tr>";
+        outHtml += openRowTag;
+        outHtml += openCellTag + "Name" + closeCellTag;
+        outHtml += openCellTag + "DateTime" + closeCellTag;
+        outHtml += openCellTag + "NumberOfPlace" + closeCellTag;
+        outHtml += openCellTag + "NumberOfEmptyPlaces" + closeCellTag;
+        outHtml += openCellTag + "CityName" + closeCellTag;
+        outHtml += closeRowTag;
         for (Flight flight : flights) {
-            outHtml += "<tr>";
-            outHtml += "<td>" + flight.getName() + "</td>";
-            outHtml += "<td>" + flight.getDateTime() + "</td>";
-            outHtml += "<td>" + flight.getNumberOfPlace() + "</td>";
-            outHtml += "<td>" + flight.getNumberOfEmptyPlaces() + "</td>";
-            outHtml += "<td>" + flight.getCity().getName() + "</td>";
-            outHtml += "</tr>";
+            outHtml += openRowTag;
+            outHtml += openCellTag + flight.getName() + closeCellTag;
+            outHtml += openCellTag + flight.getDateTime() + closeCellTag;
+            outHtml += openCellTag + flight.getNumberOfPlace() + closeCellTag;
+            outHtml += openCellTag + flight.getNumberOfEmptyPlaces() + closeCellTag;
+            outHtml += openCellTag + flight.getCity().getName() + closeCellTag;
+            outHtml += closeRowTag;
         }
         outHtml += "</table>" +
                 "</body>" +
-                "</html>";
+                closeHtmlTag;
 
 
         return outHtml;
@@ -45,21 +52,43 @@ public class HtmlPrinter implements Printer {
 
     @Override
     public String printCity(List<City> cities) {
-        String outHtml = "<html>" +"<head>"+
+        String outHtml = openHtmlTag +"<head>"+
                 "<title>City</title>"+
                 "</head>"+
                 "<body>" +
                 "<h1>City</h1>"+"<table>";
         for (City city : cities) {
-            outHtml += "<tr>";
-            outHtml += "<td>"+city.getName()+"</td>";
-            outHtml += "</tr>";
+            outHtml += openRowTag;
+            outHtml += openCellTag +city.getName()+ closeCellTag;
+            outHtml += closeRowTag;
         }
         outHtml +="</table>"+
                 "</body>" +
-                "</html>";
+                closeHtmlTag;
 
 
+        return outHtml;
+    }
+
+    public String getForm( List<City> cities){
+        String outHtml = openHtmlTag + "<body>";
+        outHtml += "<form method=\"GET\" action=\"/search\">";
+        outHtml += "<label for=\"idCity\">City: </label>";
+        outHtml += "<select name=\"idCity\" id=\"idCity\">";
+        for (City city : cities) {
+            outHtml += "<option value=\"" + city.getId() + "\">" + city.getName() + "</option>";
+        }
+        outHtml += "</select>";
+        outHtml += "<br> <br>";
+        outHtml += "<label for=\"date\"> Date (yyyy-MM-dd): </label>";
+        outHtml += "<input type=\"text\" name=\"date\" id=\"date\">";
+        outHtml += "<br> <br>";
+        outHtml += "<label for=\"numberOfPlace\"> numberOfPlace: </label>";
+        outHtml += "<input type=\"text\" name=\"numberOfPlace\" id=\"numberOfPlace\">";
+        outHtml += "<br> <br>";
+//        outHtml += "<button type=\"submit\" method=\"GET\" action = \"/searchByCity\" form >searchByCity</button>";
+        outHtml += "<input type=\"submit\" name=\"searchFlight\" value=\"searchAllOptions\">";
+        outHtml += "</form></body>" + closeHtmlTag;
         return outHtml;
     }
 

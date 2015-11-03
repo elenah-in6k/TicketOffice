@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
  */
 public abstract class GeneralServlet extends HttpServlet {
     ServiceTicketOffice service;
-    Printer printer;
+    HtmlPrinter printer;
 
     @Override
     public void init() throws ServletException {
