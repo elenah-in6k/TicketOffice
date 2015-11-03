@@ -21,11 +21,7 @@ public class HtmlPrinter implements Printer {
 
     @Override
     public String printFlight(List<Flight> flights) {
-        String outHtml = openHtmlTag + "<head>" +
-                "<title>Flights</title>" +
-                "</head>" +
-                "<body>" +
-                "<h1>Flights</h1>" + "<table width=\"100%\">";
+        String outHtml = "<table width=\"100%\">";
         outHtml += openRowTag;
         outHtml += openCellTag + "Name" + closeCellTag;
         outHtml += openCellTag + "DateTime" + closeCellTag;
@@ -42,9 +38,7 @@ public class HtmlPrinter implements Printer {
             outHtml += openCellTag + flight.getCity().getName() + closeCellTag;
             outHtml += closeRowTag;
         }
-        outHtml += "</table>" +
-                "</body>" +
-                closeHtmlTag;
+        outHtml += "</table>";
 
 
         return outHtml;
@@ -52,19 +46,13 @@ public class HtmlPrinter implements Printer {
 
     @Override
     public String printCity(List<City> cities) {
-        String outHtml = openHtmlTag +"<head>"+
-                "<title>City</title>"+
-                "</head>"+
-                "<body>" +
-                "<h1>City</h1>"+"<table>";
+        String outHtml ="<table>";
         for (City city : cities) {
             outHtml += openRowTag;
             outHtml += openCellTag +city.getName()+ closeCellTag;
             outHtml += closeRowTag;
         }
-        outHtml +="</table>"+
-                "</body>" +
-                closeHtmlTag;
+        outHtml +="</table>";
 
 
         return outHtml;
@@ -72,7 +60,7 @@ public class HtmlPrinter implements Printer {
 
     public String getForm( List<City> cities){
         String outHtml = openHtmlTag + "<body>";
-        outHtml += "<form method=\"GET\" action=\"/search\">";
+        outHtml += "<form method=\"GET\" action=\"/searchResult\">";
         outHtml += "<label for=\"idCity\">City: </label>";
         outHtml += "<select name=\"idCity\" id=\"idCity\">";
         for (City city : cities) {

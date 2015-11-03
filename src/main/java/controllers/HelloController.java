@@ -11,9 +11,9 @@ public class HelloController {
     @RequestMapping(method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
         model.addAttribute("hello", "Hello dear!");
-        model.addAttribute("city", "<a href=\"city\">Get all cities</a>");
-        model.addAttribute("flight", "<a href=\"flight\">Get all flights</a>");
-        model.addAttribute("searchFlight", "<a href=\"searchFlight\">Search flights</a>");
+        model.addAttribute("city", "city");
+        model.addAttribute("flight", "flight");
+        model.addAttribute("searchFlight", "searchFlight");
         return "hello";
     }
 }

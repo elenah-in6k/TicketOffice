@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: employee
   Date: 11/3/15
-  Time: 4:28 PM
+  Time: 5:18 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1>${name}</h1>
-${flight}
+${searchFlight}
 </body>
 </html>
