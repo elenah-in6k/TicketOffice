@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>TicketOffice</title>
+</head>
+<body>
+<h1>${hello}</h1>
+<h2>${city}</h2>
+<h2>${flight}</h2>
+<h2>${searchFlight}</h2>
+</body>
+</html>
