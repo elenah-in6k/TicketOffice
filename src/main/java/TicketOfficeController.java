@@ -2,7 +2,7 @@ import core.entity.City;
 import core.entity.Flight;
 import core.inputOutput.InputOptions;
 import core.inputOutput.Printer;
-import service.ServiceBaseImpl;
+import service.BaseServiceImpl;
 
 import java.sql.Date;
 import java.text.ParseException;
@@ -18,9 +18,9 @@ public class TicketOfficeController {
     private final InputOptions input;
 
     private final Printer printer;
-    private final ServiceBaseImpl service;
+    private final BaseServiceImpl service;
 
-    public TicketOfficeController(InputOptions input, Printer printer, ServiceBaseImpl service) {
+    public TicketOfficeController(InputOptions input, Printer printer, BaseServiceImpl service) {
         this.input = input;
         this.printer = printer;
         this.service = service;

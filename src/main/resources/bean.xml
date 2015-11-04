@@ -67,9 +67,9 @@
         <constructor-arg ref = "printer"/>
     </bean>
 
-    <bean id = "service" class = "service.ServiceBaseImpl">
+    <bean id = "service" class = "service.BaseServiceImpl"/>
 
-    </bean>
+    <bean id = "flightService" class = "service.FlightServiceImpl"/>
 
     <bean id = "controller" class  = "TicketOfficeController">
         <constructor-arg ref = "inputOptions"/>

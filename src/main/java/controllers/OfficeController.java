@@ -1,13 +1,12 @@
 package controllers;
 
 import core.entity.Flight;
-import core.inputOutput.HtmlPrinter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import service.ServiceBaseImpl;
+import service.BaseServiceImpl;
 
 import javax.servlet.ServletRequest;
 import java.sql.Date;
@@ -19,44 +18,29 @@ import java.util.List;
  * Created by employee on 11/3/15.
  */
 @Controller
-public class OfficeController{
-    ServiceBaseImpl service;
-
-    protected Date getDate(String date1) {
-        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date dateU = null;
-        try {
-            dateU = sdf1.parse(date1);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return new Date(dateU.getTime());
-    }
-
+public class OfficeController extends BaseController{
     @Autowired
-    public void init(ServiceBaseImpl service) {
-        this.service = service;
+    BaseServiceImpl service;
 
-    }
-    @RequestMapping(value = "/flight", method = RequestMethod.POST)
-    public String printAddFlight(ModelMap model, ServletRequest request )   {
-        int idCity = Integer.parseInt(request.getParameter("idCity"));
-        String name = request.getParameter("name");
-        Date date = getDate(request.getParameter("date"));
-        int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
-             service.createFlight(idCity, date, name, numberOfPlace);
-        model.addAttribute("ifAdd", "Flight add successfully");
-        return printFlight(model);
-    }
-
-    @RequestMapping(value = "/flight", method = RequestMethod.GET)
-    public String printFlight(ModelMap model) {
-        model.addAttribute("name", "Flight");
-        model.addAttribute("flight",service.getAllFlights());
-         model.addAttribute("cities", service.getAllCity());
-
-        return "flight";
-    }
+//    @RequestMapping(value = "/flight", method = RequestMethod.POST)
+//    public String printAddFlight(ModelMap model, ServletRequest request )   {
+//        int idCity = Integer.parseInt(request.getParameter("idCity"));
+//        String name = request.getParameter("name");
+//        Date date = getDate(request.getParameter("date"));
+//        int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
+//             service.createFlight(idCity, date, name, numberOfPlace);
+//        model.addAttribute("ifAdd", "Flight add successfully");
+//        return printFlight(model);
+//    }
+//
+//    @RequestMapping(value = "/flight", method = RequestMethod.GET)
+//    public String printFlight(ModelMap model) {
+//        model.addAttribute("name", "Flight");
+//        model.addAttribute("flight",service.getAllFlights());
+//         model.addAttribute("cities", service.getAllCity());
+//
+//        return "flight";
+//    }
     @RequestMapping(value = "/city", method = RequestMethod.GET)
     public String printCity(ModelMap model) {
         model.addAttribute("name", "City");
