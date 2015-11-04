@@ -83,7 +83,6 @@ public class HtmlPrinter implements Printer {
         outHtml += "<label for=\"numberOfPlace\"> numberOfPlace: </label>";
         outHtml += "<input type=\"text\" name=\"numberOfPlace\" id=\"numberOfPlace\">";
         outHtml += "<br> <br>";
-//        outHtml += "<button type=\"submit\" method=\"GET\" action = \"/searchByCity\" form >searchByCity</button>";
         outHtml += "<input type=\"submit\" name=\"searchFlight\" value=\"searchAllOptions\">";
         outHtml += "</form></body>" + closeHtmlTag;
         return outHtml;

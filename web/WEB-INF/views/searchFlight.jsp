@@ -1,3 +1,5 @@
+<%@ page import="core.entity.City" %>
+<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: employee
@@ -13,7 +15,22 @@
 <body>
 <h1>${name}</h1>
 ${searchFlight}
-
+<form method="GET" action="/searchResult">
+<label for=idCity>City: </label>
+<select name=idCity id="idCity">
+ <%   for (City city : (List<City>)request.getAttribute("cities")) {%>
+ <option value=<%=city.getId()%>> <%=city.getName()%> </option>
+   <% }%>
+    </select>
+  <br> <br>
+  <label for="date"> Date (yyyy-MM-dd): </label>
+ <input type="text" name="date" id="date">
+ <br> <br>
+ <label for="numberOfPlace"> numberOfPlace: </label>
+  <input type="text" name="numberOfPlace" id="numberOfPlace">
+ <br> <br>
+  <input type="submit" name="searchFlight" value="searchAllOptions">
+  </form>
 ${goHome}
 </body>
 </html>

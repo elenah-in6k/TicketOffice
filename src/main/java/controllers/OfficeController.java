@@ -49,6 +49,7 @@ public class OfficeController{
         Date date = getDate(request.getParameter("date"));
         int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
              service.createFlight(idCity, date, name, numberOfPlace);
+        model.addAttribute("ifAdd", "You successfully add flight");
         return printFlight(model);
     }
 
@@ -64,7 +65,6 @@ public class OfficeController{
     public String printCity(ModelMap model) {
         model.addAttribute("name", "City");
         model.addAttribute("city", printer.printCity(service.getAllCity()));
-        model.addAttribute("addCity", printer.getAddFormCity());
         model.addAttribute("goHome", printer.printHomeLink());
         return "city";
     }
@@ -82,7 +82,7 @@ public class OfficeController{
     @RequestMapping(value = "/searchFlight", method = RequestMethod.GET)
     public String searchFlight(ModelMap model) {
         model.addAttribute("name", "Search flight");
-        model.addAttribute("searchFlight", printer.getFormSearch(service.getAllCity()));
+        model.addAttribute("cities", service.getAllCity());
         model.addAttribute("goHome", printer.printHomeLink());
         return "searchFlight";
     }

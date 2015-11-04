@@ -15,7 +15,11 @@
 ${city}
 
 <h3>Add new city</h3>
-${addCity}
+<form method="POST" action="/city">
+<label for="nameCity"> Enter name city: </label>
+<input type="text" name="nameCity" id="nameCity">
+<input type="submit" name="addCity" value="addCity">
+</form>
 
 ${goHome}
 </body>

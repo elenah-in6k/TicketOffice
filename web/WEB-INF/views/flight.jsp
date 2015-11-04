@@ -17,6 +17,8 @@ ${flight}
 <h3>Add new flight</h3>
 ${addFlight}
 
+${ifAdd}
+
 ${goHome}
 </body>
 </html>
