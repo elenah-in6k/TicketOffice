@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import service.BaseServiceImpl;
+import service.CityServiceImpl;
 import service.FlightServiceImpl;
 
 import javax.servlet.ServletRequest;
@@ -20,7 +21,7 @@ public class FlightController extends BaseController {
     @Autowired
     FlightServiceImpl flightService;
     @Autowired
-    BaseServiceImpl service;
+    CityServiceImpl service;
     @RequestMapping( method = RequestMethod.POST)
     public String printAddFlight(ModelMap model, ServletRequest request )   {
         int idCity = Integer.parseInt(request.getParameter("idCity"));

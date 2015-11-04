@@ -22,64 +22,30 @@ public class OfficeController extends BaseController{
     @Autowired
     BaseServiceImpl service;
 
-//    @RequestMapping(value = "/flight", method = RequestMethod.POST)
-//    public String printAddFlight(ModelMap model, ServletRequest request )   {
+
+
+
+//    @RequestMapping(value = "/searchFlight", method = RequestMethod.GET)
+//    public String searchFlight(ModelMap model) {
+//        model.addAttribute("name", "Search flight");
+//        model.addAttribute("cities", service.getAllCity());
+//
+//        return "searchFlight";
+//    }
+//
+//    @RequestMapping(value = "/searchResult", method = RequestMethod.GET)
+//    public String printSearchFlight(ModelMap model, ServletRequest request)  {
+//        model.addAttribute("name", "Searched flights");
+//
 //        int idCity = Integer.parseInt(request.getParameter("idCity"));
-//        String name = request.getParameter("name");
 //        Date date = getDate(request.getParameter("date"));
 //        int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
-//             service.createFlight(idCity, date, name, numberOfPlace);
-//        model.addAttribute("ifAdd", "Flight add successfully");
-//        return printFlight(model);
-//    }
 //
-//    @RequestMapping(value = "/flight", method = RequestMethod.GET)
-//    public String printFlight(ModelMap model) {
-//        model.addAttribute("name", "Flight");
-//        model.addAttribute("flight",service.getAllFlights());
-//         model.addAttribute("cities", service.getAllCity());
+//        List<Flight> flights = service.findByDateCityPlace(date, numberOfPlace, idCity);
+//        model.addAttribute("searchFlight", flights);
 //
-//        return "flight";
+//        return "searchResult";
 //    }
-    @RequestMapping(value = "/city", method = RequestMethod.GET)
-    public String printCity(ModelMap model) {
-        model.addAttribute("name", "City");
-        model.addAttribute("cities", service.getAllCity());
-
-        return "city";
-    }
-
-    @RequestMapping(value = "/city", method = RequestMethod.POST)
-    public String printAddCity(ModelMap model, ServletRequest request ) {
-        String nameCity = request.getParameter("nameCity");
-        service.createCity(nameCity);
-        model.addAttribute("ifAdd", "City add successfully!");
-        return printCity(model);
-    }
-
-
-
-    @RequestMapping(value = "/searchFlight", method = RequestMethod.GET)
-    public String searchFlight(ModelMap model) {
-        model.addAttribute("name", "Search flight");
-        model.addAttribute("cities", service.getAllCity());
-
-        return "searchFlight";
-    }
-
-    @RequestMapping(value = "/searchResult", method = RequestMethod.GET)
-    public String printSearchFlight(ModelMap model, ServletRequest request)  {
-        model.addAttribute("name", "Searched flights");
-
-        int idCity = Integer.parseInt(request.getParameter("idCity"));
-        Date date = getDate(request.getParameter("date"));
-        int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
-
-        List<Flight> flights = service.findByDateCityPlace(date, numberOfPlace, idCity);
-        model.addAttribute("searchFlight", flights);
-
-        return "searchResult";
-    }
 
 
 

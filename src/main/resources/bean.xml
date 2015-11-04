@@ -71,6 +71,11 @@
 
     <bean id = "flightService" class = "service.FlightServiceImpl"/>
 
+    <bean id = "cityService" class = "service.CityServiceImpl"/>
+
+
+    <bean id = "ticketOfficeService" class = "service.TicketOfficeServiceImpl"/>
+
     <bean id = "controller" class  = "TicketOfficeController">
         <constructor-arg ref = "inputOptions"/>
         <constructor-arg ref = "printer"/>

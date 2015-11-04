@@ -12,5 +12,6 @@ import java.util.List;
 public interface FlightDao extends GenericDao<Flight> {
     List<Flight> findByDate(Date dateTime, int numberOfPlace);
     List<Flight> findByCity(int idCity);
+    public List<Flight> findByDateCityPlace(Date dateTime, int numberOfTicket, int idCity);
 
 }
