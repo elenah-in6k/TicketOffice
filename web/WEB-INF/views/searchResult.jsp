@@ -13,5 +13,7 @@
 <body>
 <h1>${name}</h1>
 ${searchFlight}
+
+${goHome}
 </body>
 </html>

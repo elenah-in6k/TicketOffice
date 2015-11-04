@@ -67,8 +67,8 @@
         <constructor-arg ref = "printer"/>
     </bean>
 
-    <bean id = "service" class = "service.ServiceTicketOffice">
-    <constructor-arg ref = "ticketOffice"/>
+    <bean id = "service" class = "service.ServiceBaseImpl">
+
     </bean>
 
     <bean id = "controller" class  = "TicketOfficeController">

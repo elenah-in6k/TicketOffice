@@ -2,28 +2,24 @@ package service;
 
 import core.entity.City;
 import core.entity.Flight;
-import core.inputOutput.FlightOptions;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Date;
-import java.text.ParseException;
 import java.util.List;
 
 /**
  * Created by employee on 10/28/15.
  */
-public class ServiceTicketOffice {
-    TicketOffice ticketOffice;
+public class ServiceBaseImpl  {
 
-    ServiceTicketOffice(TicketOffice ticketOffice){
-        this.ticketOffice = ticketOffice;
-    }
+    @Autowired
+    TicketOffice ticketOffice;
 
     public List<City> getAllCity(){
         return ticketOffice.cityDao.getAll();
     }
-    public List<Flight> getAllFlights() throws ParseException {
-        return ticketOffice.flightDao.getAll();
-    }
+
+
 
     public List<Flight> findFlights(Date date, int numberOfTicket) {
         return ticketOffice.flightDao.findByDate(date, numberOfTicket);
@@ -36,5 +32,17 @@ public class ServiceTicketOffice {
     public List<Flight> findByDateCityPlace(Date date, int numberOfTicket, int idCity){
         return ticketOffice.flightDao.findByDateCityPlace(date, numberOfTicket, idCity);
     }
+    public void createCity(String name){
+        ticketOffice.cityDao.create(new City(name));
+    }
+
+    public void createFlight(int idCity, Date dateTime, String name,   int numberOfPlace){
+        City city = ticketOffice.cityDao.read(idCity);
+        ticketOffice.flightDao.create(new Flight(dateTime, name, numberOfPlace, city));
+    }
+    public List<Flight> getAllFlights() {
+        return ticketOffice.flightDao.getAll();
+    }
+
 
 }

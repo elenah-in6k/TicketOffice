@@ -1,13 +1,8 @@
 package servlet;
 
 import core.entity.Flight;
-import org.springframework.web.context.WebApplicationContext;
-
-import org.springframework.web.context.support.WebApplicationContextUtils;
-import service.ServiceTicketOffice;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -19,26 +14,14 @@ import java.util.List;
 /**
  * Created by employee on 11/2/15.
  */
-public class FlightServlet extends HttpServlet {
-    ServiceTicketOffice service;
+public class FlightServlet extends GeneralServlet {
 
-    @Override
-    public void init() throws ServletException {
-        WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
-        service = (ServiceTicketOffice) context.getBean("service");
-    }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        List<Flight> flights = null;
-        try {
-            flights = service.getAllFlights();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
+        List<Flight> flights = service.getAllFlights();
         out.print(getFlightsTable(flights));
 
     }

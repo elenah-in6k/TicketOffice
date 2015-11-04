@@ -2,9 +2,11 @@ import core.entity.City;
 import core.entity.Flight;
 import core.inputOutput.InputOptions;
 import core.inputOutput.Printer;
-import service.ServiceTicketOffice;
+import service.ServiceBaseImpl;
 
+import java.sql.Date;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 
@@ -16,17 +18,22 @@ public class TicketOfficeController {
     private final InputOptions input;
 
     private final Printer printer;
-    private final ServiceTicketOffice service;
+    private final ServiceBaseImpl service;
 
-    public TicketOfficeController(InputOptions input, Printer printer, ServiceTicketOffice service) {
+    public TicketOfficeController(InputOptions input, Printer printer, ServiceBaseImpl service) {
         this.input = input;
         this.printer = printer;
         this.service = service;
         //service.TicketOffice t = new service.TicketOffice()
     }
-
+    private Date getDate(String date1) throws ParseException {
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date dateU = sdf1.parse(date1);
+        return new Date(dateU.getTime());
+    }
     public void openTicketOffice() throws ParseException  {
 
+        //service.createFlight(1, getDate("2015-12-3"), "Varshava121", 40);
 
         List<Flight> flightss = service.getAllFlights();
         for (Flight f : flightss) {

@@ -13,5 +13,10 @@
 <body>
 <h1>${name}</h1>
 ${city}
+
+<h3>Add new city</h3>
+${addCity}
+
+${goHome}
 </body>
 </html>

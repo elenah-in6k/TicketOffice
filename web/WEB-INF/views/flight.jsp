@@ -13,5 +13,10 @@
 <body>
 <h1>${name}</h1>
 ${flight}
+
+<h3>Add new flight</h3>
+${addFlight}
+
+${goHome}
 </body>
 </html>
