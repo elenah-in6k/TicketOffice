@@ -34,8 +34,7 @@ public class OfficeController{
     }
 
     @Autowired
-    public void init(ServiceBaseImpl service,
-                     HtmlPrinter printer) {
+    public void init(ServiceBaseImpl service) {
         this.service = service;
 
     }

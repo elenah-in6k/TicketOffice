@@ -10,32 +10,39 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>${name}</title>
+    <title>${name}</title>
 </head>
 <body>
 <h1>${name}</h1>
 <table width="100%">
-  <%List<Flight> flights = (List<Flight>)request.getAttribute("searchFlight");
-    if (flights.size() != 0) {%>
-  <tr>
-    <td>Name</td>
-    <td>DateTime</td>
-    <td>NumberOfPlace</td>
-    <td>NumberOfEmptyPlaces</td>
-    <td>CityName</td>
-  </tr>
-  <% for (Flight flight : flights) {%>
-  <tr>
-    <td><%=flight.getName() %></td>
-    <td><%=flight.getDateTime() %></td>
-    <td> <%=flight.getNumberOfPlace() %></td>
-    <td><%=flight.getNumberOfEmptyPlaces()%></td>
-    <td><%=flight.getCity().getName() %></td>
-  </tr>
-  <% }
-  } else {%>
-  Flights don't found
-  <% }%>
+    <%
+        List<Flight> flights = (List<Flight>) request.getAttribute("searchFlight");
+        if (flights.size() != 0) {
+    %>
+    <tr>
+        <td>Name</td>
+        <td>DateTime</td>
+        <td>NumberOfPlace</td>
+        <td>NumberOfEmptyPlaces</td>
+        <td>CityName</td>
+    </tr>
+    <% for (Flight flight : flights) {%>
+    <tr>
+        <td><%=flight.getName() %>
+        </td>
+        <td><%=flight.getDateTime() %>
+        </td>
+        <td><%=flight.getNumberOfPlace() %>
+        </td>
+        <td><%=flight.getNumberOfEmptyPlaces()%>
+        </td>
+        <td><%=flight.getCity().getName() %>
+        </td>
+    </tr>
+    <% }
+    } else {%>
+    Flights don't found
+    <% }%>
 </table>
 
 <h3><a href="/">Go home</a></h3>
