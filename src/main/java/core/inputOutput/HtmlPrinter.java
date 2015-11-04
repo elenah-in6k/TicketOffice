@@ -14,31 +14,57 @@ public class HtmlPrinter implements Printer {
 
     private final String openRowTag = "<tr>";
     private final String closeRowTag = "</tr>";
-    private final String openCellTag = "<td>";
-    private final String closeCellTag = "</td>";
     private final String openHtmlTag = "<html>";
     private final String closeHtmlTag = "</html>";
 
+    public String printHomeLink(){
+       return "<h3><a href=\"/\">Go home</a></h3>";
+    }
+
+    @Override
+    public void printHelloMessage() {
+
+    }
+
+    @Override
+    public void printInputDateMessage() {
+
+    }
+    @Override
+    public void printInputTicketMessage() {
+
+    }
+    @Override
+    public void printInputCityMessage() {
+
+    }
+
+    @Override
+    public void printSorryMessage() {
+
+    }
+
     @Override
     public String printFlight(List<Flight> flights) {
+
         String outHtml = "<table width=\"100%\">";
 
         if (flights.size() != 0) {
-            outHtml += openRowTag;
-            outHtml += openCellTag + "Name" + closeCellTag;
-            outHtml += openCellTag + "DateTime" + closeCellTag;
-            outHtml += openCellTag + "NumberOfPlace" + closeCellTag;
-            outHtml += openCellTag + "NumberOfEmptyPlaces" + closeCellTag;
-            outHtml += openCellTag + "CityName" + closeCellTag;
-            outHtml += closeRowTag;
+            outHtml += "<tr>";
+            outHtml += "<td>" + "Name" + "</td>";
+            outHtml += "<td>" + "DateTime" + "</td>";
+            outHtml += "<td>" + "NumberOfPlace" + "</td>";
+            outHtml += "<td>" + "NumberOfEmptyPlaces" + "</td>";
+            outHtml += "<td>" + "CityName" + "</td>";
+            outHtml += "</tr>";
             for (Flight flight : flights) {
-                outHtml += openRowTag;
-                outHtml += openCellTag + flight.getName() + closeCellTag;
-                outHtml += openCellTag + flight.getDateTime() + closeCellTag;
-                outHtml += openCellTag + flight.getNumberOfPlace() + closeCellTag;
-                outHtml += openCellTag + flight.getNumberOfEmptyPlaces() + closeCellTag;
-                outHtml += openCellTag + flight.getCity().getName() + closeCellTag;
-                outHtml += closeRowTag;
+                outHtml += "<tr>";
+                outHtml += "<td>" + flight.getName() + "</td>";
+                outHtml += "<td>" + flight.getDateTime() + "</td>";
+                outHtml += "<td>" + flight.getNumberOfPlace() + "</td>";
+                outHtml += "<td>" + flight.getNumberOfEmptyPlaces() + "</td>";
+                outHtml += "<td>" + flight.getCity().getName() + "</td>";
+                outHtml += "</tr>";
             }
         } else {
             outHtml += "Flights don\'t found";
@@ -50,21 +76,13 @@ public class HtmlPrinter implements Printer {
     }
 
     @Override
-    public String printCity(List<City> cities) {
-        String outHtml = "<table>";
-        if (cities.size() != 0) {
-            for (City city : cities) {
-                outHtml += openRowTag;
-                outHtml += openCellTag + city.getName() + closeCellTag;
-                outHtml += closeRowTag;
-            }
-        } else {
-            outHtml += "City don\'t found";
-        }
-        outHtml += "</table>";
+    public void printTicket(Ticket ticket) {
 
+    }
 
-        return outHtml;
+    @Override
+    public void printFlightInfo(Flight flight) {
+
     }
 
     public String getFormSearch(List<City> cities) {
@@ -87,6 +105,7 @@ public class HtmlPrinter implements Printer {
         outHtml += "</form></body>" + closeHtmlTag;
         return outHtml;
     }
+
     public String getAddFlightForm(List<City> cities) {
         String outHtml = openHtmlTag + "<body>";
         outHtml += "<form method=\"POST\" action=\"/flight\">";
@@ -111,6 +130,7 @@ public class HtmlPrinter implements Printer {
         outHtml += "</form></body>" + closeHtmlTag;
         return outHtml;
     }
+
     public String getAddFormCity(){
         String outHtml = openHtmlTag + "<body>";
         outHtml += "<form method=\"POST\" action=\"/city\">";
@@ -121,43 +141,22 @@ public class HtmlPrinter implements Printer {
         return outHtml;
     }
 
-    public String printHomeLink(){
-       return "<h3><a href=\"/\">Go home</a></h3>";
-    }
-
     @Override
-    public void printHelloMessage() {
+    public String printCity(List<City> cities) {
+        String outHtml = "<table>";
+        if (cities.size() != 0) {
+            for (City city : cities) {
+                outHtml += "<tr>";
+                outHtml += "<td>" + city.getName() + "</td>";
+                outHtml += "</tr>";
+            }
+        } else {
+            outHtml += "City don\'t found";
+        }
+        outHtml += "</table>";
 
-    }
 
-    @Override
-    public void printInputDateMessage() {
-
-    }
-
-    @Override
-    public void printInputTicketMessage() {
-
-    }
-
-    @Override
-    public void printInputCityMessage() {
-
-    }
-
-    @Override
-    public void printSorryMessage() {
-
-    }
-
-    @Override
-    public void printTicket(Ticket ticket) {
-
-    }
-
-    @Override
-    public void printFlightInfo(Flight flight) {
-
+        return outHtml;
     }
 
 }

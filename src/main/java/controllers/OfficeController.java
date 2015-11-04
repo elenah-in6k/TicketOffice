@@ -21,8 +21,6 @@ import java.util.List;
 @Controller
 public class OfficeController{
     ServiceBaseImpl service;
-    HtmlPrinter printer;
-
 
     protected Date getDate(String date1) {
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
@@ -39,7 +37,6 @@ public class OfficeController{
     public void init(ServiceBaseImpl service,
                      HtmlPrinter printer) {
         this.service = service;
-        this.printer = printer;
 
     }
     @RequestMapping(value = "/flight", method = RequestMethod.POST)
@@ -49,23 +46,23 @@ public class OfficeController{
         Date date = getDate(request.getParameter("date"));
         int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
              service.createFlight(idCity, date, name, numberOfPlace);
-        model.addAttribute("ifAdd", "You successfully add flight");
+        model.addAttribute("ifAdd", "Flight add successfully");
         return printFlight(model);
     }
 
     @RequestMapping(value = "/flight", method = RequestMethod.GET)
     public String printFlight(ModelMap model) {
         model.addAttribute("name", "Flight");
-        model.addAttribute("flight", printer.printFlight(service.getAllFlights()));
-         model.addAttribute("addFlight", printer.getAddFlightForm(service.getAllCity()));
-        model.addAttribute("goHome", printer.printHomeLink());
+        model.addAttribute("flight",service.getAllFlights());
+         model.addAttribute("cities", service.getAllCity());
+
         return "flight";
     }
     @RequestMapping(value = "/city", method = RequestMethod.GET)
     public String printCity(ModelMap model) {
         model.addAttribute("name", "City");
-        model.addAttribute("city", printer.printCity(service.getAllCity()));
-        model.addAttribute("goHome", printer.printHomeLink());
+        model.addAttribute("cities", service.getAllCity());
+
         return "city";
     }
 
@@ -73,7 +70,7 @@ public class OfficeController{
     public String printAddCity(ModelMap model, ServletRequest request ) {
         String nameCity = request.getParameter("nameCity");
         service.createCity(nameCity);
-
+        model.addAttribute("ifAdd", "City add successfully!");
         return printCity(model);
     }
 
@@ -83,7 +80,7 @@ public class OfficeController{
     public String searchFlight(ModelMap model) {
         model.addAttribute("name", "Search flight");
         model.addAttribute("cities", service.getAllCity());
-        model.addAttribute("goHome", printer.printHomeLink());
+
         return "searchFlight";
     }
 
@@ -96,8 +93,8 @@ public class OfficeController{
         int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
 
         List<Flight> flights = service.findByDateCityPlace(date, numberOfPlace, idCity);
-        model.addAttribute("searchFlight", printer.printFlight(flights));
-        model.addAttribute("goHome", printer.printHomeLink());
+        model.addAttribute("searchFlight", flights);
+
         return "searchResult";
     }
 

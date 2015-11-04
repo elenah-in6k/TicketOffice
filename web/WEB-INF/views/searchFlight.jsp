@@ -24,13 +24,13 @@ ${searchFlight}
     </select>
   <br> <br>
   <label for="date"> Date (yyyy-MM-dd): </label>
- <input type="text" name="date" id="date">
+ <input type="date" name="date" id="date">
  <br> <br>
  <label for="numberOfPlace"> numberOfPlace: </label>
-  <input type="text" name="numberOfPlace" id="numberOfPlace">
+  <input type="number" name="numberOfPlace" id="numberOfPlace">
  <br> <br>
   <input type="submit" name="searchFlight" value="searchAllOptions">
   </form>
-${goHome}
+<h3><a href="/">Go home</a></h3>
 </body>
 </html>

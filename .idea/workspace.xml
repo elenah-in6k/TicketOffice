@@ -10,6 +10,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/city.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/city.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/flight.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/flight.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TicketOffice.iws" />
@@ -38,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OfficeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
+              <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,17 +51,37 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="119" selection-end-column="27" />
+              <caret line="20" column="49" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchFlight.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flight.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/flight.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22326455">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchResult.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.76923">
+              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchFlight.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16725978">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state vertical-scroll-proportion="-15.384615">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -69,8 +90,8 @@
       <file leaf-file-name="city.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/city.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.692307">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state vertical-scroll-proportion="-6.7454543">
+              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -164,7 +185,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/searchedFlights.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/service/TicketOffice.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/core/entity/Flight.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ServiceTicketOffice.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ServiceTicketOfficeImpl.java" />
@@ -177,11 +197,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/bean.xml" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/FlightServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/TicketOfficeController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/flight.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/city.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/OfficeController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/flight.jsp" />
       </list>
     </option>
   </component>
@@ -1097,7 +1118,7 @@
       <workItem from="1446552622313" duration="609000" />
       <workItem from="1446553605892" duration="10751000" />
       <workItem from="1446624448434" duration="13997000" />
-      <workItem from="1446642872088" duration="4893000" />
+      <workItem from="1446642872088" duration="8293000" />
     </task>
     <task id="LOCAL-00001" summary="all">
       <created>1445440051802</created>
@@ -1195,11 +1216,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446644453913</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add jsp search flight">
+      <created>1446647797379</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1446647797379</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88016000" />
+    <option name="totallyTimeSpent" value="91416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1615" height="1026" extended-state="6" />
@@ -1263,7 +1290,8 @@
     <MESSAGE value="create MVC  without" />
     <MESSAGE value="add new City and goHome" />
     <MESSAGE value="add new City; add new Flight and goHome" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new City; add new Flight and goHome" />
+    <MESSAGE value="add jsp search flight" />
+    <option name="LAST_COMMIT_MESSAGE" value="add jsp search flight" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1473,14 +1501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46601942">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/entity/City.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1514,8 +1534,8 @@
         <state vertical-scroll-proportion="0.936107">
           <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
           <folding>
-            <element signature="e#1305#1306#0" expanded="true" />
-            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1563,7 +1583,7 @@
         <state vertical-scroll-proportion="0.53491825">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1580,14 +1600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.59013605">
           <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/flight.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7767355">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1619,7 +1631,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="119" selection-end-column="27" />
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/city.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.7454543">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1627,25 +1647,33 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OfficeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
+          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/city.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.692307">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state vertical-scroll-proportion="-25.76923">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16725978">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state vertical-scroll-proportion="-15.384615">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/flight.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22326455">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding />
         </state>
       </provider>
