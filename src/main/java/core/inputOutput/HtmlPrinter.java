@@ -90,7 +90,7 @@ public class HtmlPrinter implements Printer {
     }
     public String getAddFlightForm(List<City> cities) {
         String outHtml = openHtmlTag + "<body>";
-        outHtml += "<form method=\"GET\" action=\"/flight\">";
+        outHtml += "<form method=\"POST\" action=\"/flight\">";
         outHtml += "<label for=\"idCity\">City: </label>";
         outHtml += "<select name=\"idCity\" id=\"idCity\">";
         for (City city : cities) {

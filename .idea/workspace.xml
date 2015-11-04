@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6182a8b0-5fac-4341-ad59-d479c71aeae5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/views/office.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/service/ServiceTicketOffice.java" afterPath="$PROJECT_DIR$/src/main/java/service/ServiceBaseImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/entity/Flight.class" afterPath="$PROJECT_DIR$/target/classes/core/entity/Flight.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/TicketOfficeController.class" afterPath="$PROJECT_DIR$/target/classes/TicketOfficeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/CityServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/CityServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/entity/Flight.java" afterPath="$PROJECT_DIR$/src/main/java/core/entity/Flight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/FlightServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/FlightServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/GeneralServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/GeneralServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java" afterPath="$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/OfficeController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/OfficeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/SearchFlightFormServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/SearchFlightFormServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/SearchFlightServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/SearchFlightServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TicketOfficeController.java" afterPath="$PROJECT_DIR$/src/main/java/TicketOfficeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bean.xml" afterPath="$PROJECT_DIR$/src/main/resources/bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/bean.xml" afterPath="$PROJECT_DIR$/target/classes/bean.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/city.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/city.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/flight.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/flight.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/searchFlight.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TicketOffice.iws" />
@@ -51,14 +30,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OfficeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OfficeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OfficeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="97" column="11" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HtmlPrinter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67346936">
+              <caret line="108" column="31" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,7 +145,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/searchResult.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/flight.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/core/entity/Flight.java" />
-        <option value="$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ServiceTicketOffice.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ServiceTicketOfficeImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/TicketOfficeService.java" />
@@ -169,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/main/java/servlet/FlightServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/TicketOfficeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/OfficeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java" />
       </list>
     </option>
   </component>
@@ -436,6 +425,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="daoImplements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TicketOffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TicketOffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inputOutput" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TicketOffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TicketOffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1002,7 +1047,7 @@
       <workItem from="1446552622313" duration="609000" />
       <workItem from="1446553605892" duration="10751000" />
       <workItem from="1446624448434" duration="13997000" />
-      <workItem from="1446642872088" duration="831000" />
+      <workItem from="1446642872088" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="all">
       <created>1445440051802</created>
@@ -1088,11 +1133,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446564540070</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add new City and goHome">
+      <created>1446643779469</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1446643779469</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83954000" />
+    <option name="totallyTimeSpent" value="84641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1615" height="1026" extended-state="6" />
@@ -1186,7 +1237,8 @@
     <MESSAGE value="servlet All normal mode" />
     <MESSAGE value="create MVC home page" />
     <MESSAGE value="create MVC  without" />
-    <option name="LAST_COMMIT_MESSAGE" value="create MVC  without" />
+    <MESSAGE value="add new City and goHome" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new City and goHome" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1366,6 +1418,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1396,6 +1449,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46601942">
           <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1403,6 +1457,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46601942">
           <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1410,6 +1465,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.076923">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,6 +1473,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52427185">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1459,17 +1516,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="31" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/CityServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1477,6 +1528,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1484,6 +1536,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.026745914">
           <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,6 +1566,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53491825">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1550,11 +1606,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/OfficeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="97" column="11" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/inputOutput/HtmlPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67346936">
+          <caret line="108" column="31" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
