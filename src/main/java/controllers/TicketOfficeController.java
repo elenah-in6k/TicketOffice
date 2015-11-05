@@ -33,18 +33,4 @@ public class TicketOfficeController extends BaseController {
         return "searchFlight";
     }
 
-    @RequestMapping(value = "/searchResult", method = RequestMethod.GET)
-    public String printSearchFlight(ModelMap model, ServletRequest request)  {
-        model.addAttribute("name", "Searched flights");
-
-        int idCity = Integer.parseInt(request.getParameter("idCity"));
-        Date date = getDate(request.getParameter("date"));
-        int numberOfPlace = Integer.parseInt(request.getParameter("numberOfPlace"));
-
-        List<Flight> flights = service.findByDateCityPlace(date, numberOfPlace, idCity);
-        model.addAttribute("searchFlight", flights);
-
-        return "searchResult";
-    }
-
 }
