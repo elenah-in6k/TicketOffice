@@ -18,7 +18,7 @@ public interface Printer {
     void printSorryMessage();
     void printTicket(Ticket ticket);
     void printFlightInfo(Flight flight);
-    String printFlight(List<Flight> flight);
-    String printCity(List<City> cities);
+
+
 
 }

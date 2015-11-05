@@ -1,4 +1,4 @@
-package service;
+package console;
 
 import core.TicketOffice;
 import core.entity.City;
@@ -13,7 +13,7 @@ import java.util.List;
  * Created by employee on 10/28/15.
  */
 @Service("baseService")
-public class BaseServiceImpl {
+public class ConsoleService {
 
     @Autowired
     TicketOffice ticketOffice;

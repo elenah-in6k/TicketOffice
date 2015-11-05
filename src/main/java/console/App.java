@@ -10,7 +10,7 @@ import java.text.ParseException;
 public class App {
     public static void main(String[] s)throws ParseException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                new String[]{"bean.xml"}, true);
+                new String[]{"console-context.xml"}, true);
         TicketOfficeController controller = (TicketOfficeController)context.getBean("controller");
         controller.openTicketOffice();
     }

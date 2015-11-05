@@ -42,36 +42,4 @@
     </bean>
     <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager"/>
 
-    <bean id="systemIn" class="console.StreamFactory" factory-method="getInputStream" />
-    <bean id="systemOut" class="console.StreamFactory" factory-method="getPrintStream" />
-
-    <bean id = "printer" class  = "console.PrinterImpl">
-        <constructor-arg ref = "systemOut"/>
-    </bean>
-    <bean id = "htmlPrinter" class  = "console.HtmlPrinter">
-    </bean>
-
-    <bean id = "inputOptions" class  = "console.InputOptionsImpl">
-        <constructor-arg ref = "systemIn"/>
-        <constructor-arg ref = "printer"/>
-    </bean>
-
-    <bean id = "baseService" class = "service.BaseServiceImpl"/>
-
-    <bean id = "flightService" class = "service.FlightServiceImpl"/>
-
-    <bean id = "cityService" class = "service.CityServiceImpl"/>
-
-
-    <bean id = "ticketOfficeService" class = "service.TicketOfficeServiceImpl"/>
-
-    <bean id = "controller" class  = "console.TicketOfficeController">
-        <constructor-arg ref = "inputOptions"/>
-        <constructor-arg ref = "printer"/>
-        <constructor-arg ref = "baseService"/>
-    </bean>
-
-
-
-
     </beans>

@@ -2,9 +2,6 @@ package console;
 
 import core.entity.City;
 import core.entity.Flight;
-import console.InputOptions;
-import console.Printer;
-import service.BaseServiceImpl;
 
 import java.sql.Date;
 import java.text.ParseException;
@@ -20,9 +17,9 @@ public class TicketOfficeController {
     private final InputOptions input;
 
     private final Printer printer;
-    private final BaseServiceImpl service;
+    private final ConsoleService service;
 
-    public TicketOfficeController(InputOptions input, Printer printer, BaseServiceImpl service) {
+    public TicketOfficeController(InputOptions input, Printer printer, ConsoleService service) {
         this.input = input;
         this.printer = printer;
         this.service = service;

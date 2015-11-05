@@ -10,10 +10,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>${name}</title>
+    <title>Searched flights</title>
 </head>
 <body>
-<h1>${name}</h1>
+<h1>Searched flights</h1>
 <table width="80%" border="1px inset black">
     <%
         List<Flight> flights = (List<Flight>) request.getAttribute("searchFlight");

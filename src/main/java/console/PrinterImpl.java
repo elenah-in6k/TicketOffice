@@ -50,13 +50,4 @@ public class PrinterImpl implements Printer  {
 
     }
 
-    @Override
-    public String printFlight(List<Flight> flight) {
-        return null;
-    }
-
-    @Override
-    public String printCity(List<City> cities) {
-        return null;
-    }
 }

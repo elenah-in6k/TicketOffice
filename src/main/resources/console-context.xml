@@ -3,4 +3,28 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+       <import resource="database-context.xml"/>
+
+
+       <bean id="systemIn" class="console.StreamFactory" factory-method="getInputStream" />
+       <bean id="systemOut" class="console.StreamFactory" factory-method="getPrintStream" />
+
+       <bean id = "printer" class  = "console.PrinterImpl">
+              <constructor-arg ref = "systemOut"/>
+       </bean>
+
+
+       <bean id = "inputOptions" class  = "console.InputOptionsImpl">
+              <constructor-arg ref = "systemIn"/>
+              <constructor-arg ref = "printer"/>
+       </bean>
+
+       <bean id = "consoleService" class = "console.ConsoleService"/>
+
+       <bean id = "controller" class  = "console.TicketOfficeController">
+              <constructor-arg ref = "inputOptions"/>
+              <constructor-arg ref = "printer"/>
+              <constructor-arg ref = "consoleService"/>
+       </bean>
+
 </beans>

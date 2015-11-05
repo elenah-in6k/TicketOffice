@@ -15,7 +15,7 @@
 <body>
 <h1>${name}</h1>
 ${searchFlight}
-<form method="GET" action="/searchResult">
+<form method="GET" action="/searchFlight/result/?idCity={idCity}&date={date}&numberOfPlace={numberOfPlace}">
     <label for=idCity>City: </label>
     <select name=idCity id="idCity">
         <% for (City city : (List<City>) request.getAttribute("cities")) {%>
@@ -30,7 +30,7 @@ ${searchFlight}
     <label for="numberOfPlace"> numberOfPlace: </label>
     <input type="number" name="numberOfPlace" id="numberOfPlace">
     <br> <br>
-    <input type="submit" name="searchFlight" value="searchAllOptions">
+    <input type="submit"  value="searchAllOptions">
 </form>
 <h3><a href="/">Go home</a></h3>
 </body>
