@@ -1,6 +1,6 @@
 package service;
 
-import core.daoInterface.FlightDao;
+import core.dao.FlightDao;
 import core.entity.Flight;
 import org.springframework.beans.factory.annotation.Autowired;
 

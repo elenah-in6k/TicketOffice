@@ -1,6 +1,6 @@
 package service;
 
-import core.daoInterface.CityDao;
+import core.dao.CityDao;
 import core.entity.City;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -22,4 +22,24 @@ public class CityServiceImpl implements CityService {
     public void createCity(String name){
         cityDao.create(new City(name));
     }
+
+    @Override
+    public boolean deleteCity(int id) {
+        boolean flag = false;
+        try{
+        cityDao.delete(readCity(id));
+            flag = true;
+        }
+        catch(Exception e){
+
+        }
+        return flag;
+    }
+
+    @Override
+    public City readCity(int id) {
+        return cityDao.read(id);
+    }
+
+
 }

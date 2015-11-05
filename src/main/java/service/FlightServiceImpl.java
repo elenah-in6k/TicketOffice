@@ -1,6 +1,7 @@
 package service;
 
-import core.daoInterface.FlightDao;
+import core.TicketOffice;
+import core.dao.FlightDao;
 import core.entity.City;
 import core.entity.Flight;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class FlightServiceImpl implements FlightService {
     @Autowired
-    TicketOffice ticketOffice;
+    private TicketOffice ticketOffice;
     @Autowired
     FlightDao flightDao;
 
@@ -26,5 +27,10 @@ public class FlightServiceImpl implements FlightService {
      public void createFlight(int idCity, Date dateTime, String name,   int numberOfPlace){
         City city = ticketOffice.cityDao.read(idCity);
         flightDao.create(new Flight(dateTime, name, numberOfPlace, city));
+    }
+
+    @Override
+    public void deleteFlight(int id) {
+        flightDao.delete(flightDao.read(id));
     }
 }

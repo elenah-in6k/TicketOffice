@@ -1,6 +1,6 @@
 package servlet;
 
-import core.inputOutput.HtmlPrinter;
+import console.HtmlPrinter;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import service.BaseServiceImpl;

@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>${name}</h1>
-<table width="100%">
+<table width="80%" border="1px inset black">
     <%
         List<Flight> flights = (List<Flight>) request.getAttribute("searchFlight");
         if (flights.size() != 0) {

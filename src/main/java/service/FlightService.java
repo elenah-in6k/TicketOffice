@@ -11,4 +11,6 @@ import java.util.List;
 public interface FlightService {
     public List<Flight> getAllFlights();
     public void createFlight(int idCity, Date dateTime, String name,   int numberOfPlace);
+
+    void deleteFlight(int id);
 }

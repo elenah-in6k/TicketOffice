@@ -12,4 +12,8 @@ public interface CityService {
     public List<City> getAllCity();
 
     public void createCity(String name);
+
+    public boolean deleteCity(int id);
+
+    City readCity(int id);
 }

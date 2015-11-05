@@ -1,8 +1,8 @@
 //import core.daoInterface.FlightDao;
 //import core.entity.Flight;
-//import core.inputOutput.FlightOptions;
-//import core.inputOutput.InputOptions;
-//import core.inputOutput.Printer;
+//import console.FlightOptions;
+//import console.InputOptions;
+//import console.Printer;
 //import org.junit.Before;
 //import org.junit.Ignore;
 //import org.junit.Test;
@@ -24,11 +24,11 @@
 //public class TicketOfficeControllerTest implements Printer, InputOptions {
 //
 //    private List<String> actions = new ArrayList<String>();
-//    public TicketOfficeController controller;
+//    public console.TicketOfficeController controller;
 //
 //    @Before
 //    public void setUp() throws Exception {
-//        controller = new TicketOfficeController(this, this);
+//        controller = new console.TicketOfficeController(this, this);
 //    }
 //
 //    @Test
