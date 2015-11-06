@@ -1,18 +1,42 @@
-<%--<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>--%>
 <html>
 <head>
-    <title>TicketOffice</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Bootstrap core CSS -->
+
+
+ <title>TicketOffice</title>
+    <link rel="stylesheet" href="/resources/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="/resources/dist/css/bootstrap-theme.css" >
+    <link rel="stylesheet"  href="/WEB-INF/style/style.css" >
+
 </head>
 <body>
-<h1>Hello dear User!</h1>
-<%--<link rel='stylesheet' href='<%= org.webjars.AssetLocator.getWebJarPath("css/bootstrap.min.css") %>'>--%>
-<%--<link rel='stylesheet' href='<%= org.webjars.AssetLocator.getWebJarPath("css/bootstrap-theme.min.css") %>'>--%>
-<%--<spring:url value="web/WEB-INF/style/style.css" />" rel="stylesheet"/>--%>
-<h2><a href="cities">Get all cities</a></h2>
 
-<h2><a href="flights">Get all flights</a></h2>
+<div class="navbar-wrapper" >
 
-<h2><a href="searchFlight">Search flights</a></h2>
 
+        <nav class="navbar navbar-default navbar-fixed-top ">
+            <div class="container ">
+
+                    <a class="navbar-brand" href="/"> Home </a>
+                    <a class="navbar-brand" href="cities">  Cities  </a>
+                    <a class="navbar-brand" href="flights">  Flights  </a>
+                    <a class="navbar-brand" href="searchFlight">  Search flights  </a>
+
+            </div>
+        </nav>
+    </div>
+
+<div class="container">
+<div class="jumbotron">
+    <h1>Hello dear User!</h1>
+    <p>  </p>
+</div>
+</div>
 </body>
 </html>
