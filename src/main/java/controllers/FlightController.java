@@ -28,6 +28,7 @@ public class FlightController extends BaseController {
             @RequestParam String date,
             @RequestParam int numberOfPlace
     )   {
+        
         Date dateS = getDate(date);
         flightService.createFlight(idCity, dateS, name, numberOfPlace);
         model.addAttribute("ifAdd", "Flight add successfully");
