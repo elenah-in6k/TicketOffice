@@ -23,7 +23,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf">
+        <schema name="TicketOffice" object-types="table" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d2139529-fac2-425d-a595-015d3a0ea0cf">
@@ -41,6 +45,7 @@ from City;]]></console>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-list connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf" dataset="ticketoffice.city" active-filter-id="" />
+    <filter-list connection-id="d2139529-fac2-425d-a595-015d3a0ea0cf" dataset="TicketOffice.City" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/main/aaa.sql" connection-id="virtual-mysql-connection" current-schema="ROOT" />

@@ -42,11 +42,12 @@ public class Flight{
     private int numberOfReservedPlace;
 
     Flight(){}
-    public Flight( Date dateTime, String name,   int numberOfPlace){
+    public Flight( Date dateTime, String name,   int numberOfPlace, City city){
         this.name = name;
         this.dateTime = dateTime;
         this.numberOfPlace = numberOfPlace;
-
+        this.city = city;
+        this.numberOfReservedPlace = 0;
     }
     public City getCity() {
         return city;
