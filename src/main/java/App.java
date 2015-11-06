@@ -1,26 +1,19 @@
+import core.inputOutput.InputOptions;
+import core.inputOutput.InputOptionsImpl;
+import core.inputOutput.Printer;
+import core.inputOutput.PrinterImpl;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ticketoffice.*;
+
+import java.text.ParseException;
 
 /**
  * Created by employee on 10/22/15.
  */
 public class App {
-    public static void main(String[] s) {
-
+    public static void main(String[] s)throws ParseException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                new String[] {"bean.xml"}, true);
-        TOService service = (TOService)context.getBean("storageService");
-        service.save(null);
-
-
-
-        TicketOffice ticketOffice = new TicketOfficeImpl();
-
-        Printer printer = new PrinterImpl(System.out);
-        printer.printHelloMessage();
-        InputOptions inputOptions = new InputOptionsImpl(System.in, printer);
-
-        TicketOfficeController controller = new TicketOfficeController(inputOptions, ticketOffice, printer);
+                new String[]{"bean.xml"}, true);
+        TicketOfficeController controller = (TicketOfficeController)context.getBean("controller");
         controller.openTicketOffice();
     }
 }
