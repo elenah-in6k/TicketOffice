@@ -4,24 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/controllers/CityController.java" line="44" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6182a8b0-5fac-4341-ad59-d479c71aeae5" name="Default" comment=".">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_efsavage_twitter_bootstrap_bootstrap_maven_2_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_11_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reflections_reflections_0_9_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_webjars_locator_0_1.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/FlightController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/FlightController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TicketOffice.iml" afterPath="$PROJECT_DIR$/TicketOffice.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/TicketOffice_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/TicketOffice_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/dispatcher-servlet.xml" />
+    <list default="true" id="6182a8b0-5fac-4341-ad59-d479c71aeae5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/flights.jsp" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/flights.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/hello.jsp" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/hello.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/style/style.css" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/style/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TicketOffice.iws" />
@@ -46,11 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35102925">
+            <state vertical-scroll-proportion="0.0">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flights.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/views/flights.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7640068">
+              <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -59,8 +54,8 @@
       <file leaf-file-name="hello.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/views/hello.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.653846">
-              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+            <state vertical-scroll-proportion="-13.846154">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -122,7 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/core/daoInterface/GenericDao.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/cities.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/console/FlightOptions.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/dao/CityDao.java" />
@@ -173,6 +167,7 @@
         <option value="$PROJECT_DIR$/src/main/web/WEB-INF/style/style.css" />
         <option value="$PROJECT_DIR$/src/main/web/resources/dist/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/src/main/web/WEB-INF/views/hello.jsp" />
+        <option value="$PROJECT_DIR$/src/main/web/WEB-INF/views/flights.jsp" />
       </list>
     </option>
   </component>
@@ -1099,7 +1094,7 @@
       <workItem from="1446642872088" duration="11645000" />
       <workItem from="1446706965648" duration="29463000" />
       <workItem from="1446794858982" duration="9003000" />
-      <workItem from="1446812958286" duration="11297000" />
+      <workItem from="1446812958286" duration="12065000" />
     </task>
     <task id="LOCAL-00001" summary="all">
       <created>1445440051802</created>
@@ -1245,11 +1240,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446805700321</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add bootstrap">
+      <created>1446824370154</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1446824370154</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144531000" />
+    <option name="totallyTimeSpent" value="145299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1617" height="1055" extended-state="6" />
@@ -1266,7 +1267,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21684738" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843652" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3231899" sideWeight="0.4931677" order="4" side_tool="false" content_ui="tabs" x="88" y="286" width="1569" height="502" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3231899" sideWeight="0.4931677" order="4" side_tool="false" content_ui="tabs" x="88" y="286" width="1569" height="502" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1319,7 +1320,8 @@
     <MESSAGE value="add searchFlight servise and controller" />
     <MESSAGE value="change delete -&gt; POST; exception in service;" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="add bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="add bootstrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1375,6 +1377,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.936107">
           <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="e#1305#1306#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1587,14 +1593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/views/flights.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5891341">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/FlightController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.96585363">
@@ -1710,18 +1708,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/web/resources/dist/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1827" column="23" selection-start-line="1827" selection-start-column="23" selection-end-line="1827" selection-end-column="23" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/views/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.653846">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        <state vertical-scroll-proportion="-13.846154">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1734,10 +1732,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/style/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/web/resources/dist/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35102925">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1827" column="23" selection-start-line="1827" selection-start-column="23" selection-end-line="1827" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/web/WEB-INF/views/flights.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7640068">
+          <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
           <folding />
         </state>
       </provider>
