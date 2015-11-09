@@ -32,7 +32,7 @@ public class TicketOfficeController extends BaseController {
 
     @RequestMapping( method = RequestMethod.GET)
     public String searchFlight(ModelMap model) {
-        model.addAttribute("name", "Search flight");
+
         model.addAttribute("cities", cityService.getAllCity());
 
         return "searchFlight";

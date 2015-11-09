@@ -10,12 +10,40 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="/resources/css/bootstrap-theme.css" >
+    <link rel="stylesheet"  href="/WEB-INF/style/style.css" >
     <title>City</title>
 </head>
 <body>
-<h1>City</h1>
+<p>  </p>
+<p>  </p>
+<div class="navbar-wrapper" >
 
-<table border="1px inset black">
+
+    <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="container ">
+
+            <a class="navbar-brand" href="/"> Home </a>
+            <a class="navbar-brand" href="cities">  Cities  </a>
+            <a class="navbar-brand" href="flights">  Flights  </a>
+            <a class="navbar-brand" href="searchFlight">  Search flights  </a>
+
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="jumbotron">
+<h1>City</h1>
+    </div></div>
+
+<div class="container">
+    <div class="jumbotron">
+        <table class="table-striped table-bordered" align="center">
+
     <%
         List<City> cities = (List<City>) request.getAttribute("cities");
         if (cities.size() != 0) {
@@ -35,7 +63,9 @@
     <% }%>
 </table>
 <font color="red">${exception}</font>
-
+    </div></div>
+<div class="container">
+    <div class="jumbotron">
 <h3>Add new city</h3>
 
 <form method="POST" action="/cities">
@@ -44,7 +74,6 @@
     <input type="submit" name="addCity" value="addCity">
 </form>
 <font color="green">${ifAdd}</font>
-
-<h3><a href="/">Go home</a></h3>
+</div></div>
 </body>
 </html>

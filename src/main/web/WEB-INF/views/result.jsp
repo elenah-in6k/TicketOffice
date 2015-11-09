@@ -10,11 +10,39 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="/resources/css/bootstrap-theme.css" >
+    <link rel="stylesheet"  href="/WEB-INF/style/style.css" >
     <title>Searched flights</title>
 </head>
 <body>
+
+<div class="navbar-wrapper" >
+
+
+    <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="container ">
+
+            <a class="navbar-brand" href="/"> Home </a>
+            <a class="navbar-brand" href="cities">  Cities  </a>
+            <a class="navbar-brand" href="flights">  Flights  </a>
+            <a class="navbar-brand" href="searchFlight">  Search flights  </a>
+
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="jumbotron">
 <h1>Searched flights</h1>
-<table width="80%" border="1px inset black">
+</div></div>
+
+<div class="container">
+    <div class="jumbotron">
+        <table class="table-striped table-bordered" align="center">
+
     <%
         List<Flight> flights = (List<Flight>) request.getAttribute("searchFlight");
         if (flights.size() != 0) {
@@ -44,7 +72,6 @@
     Flights don't found
     <% }%>
 </table>
-
-<h3><a href="/">Go home</a></h3>
+</div></div>
 </body>
 </html>

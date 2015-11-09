@@ -14,16 +14,37 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/resources/dist/css/bootstrap.min.css">
-    <link rel="stylesheet"  href="/resources/dist/css/bootstrap-theme.css" >
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="/resources/css/bootstrap-theme.css" >
     <link rel="stylesheet"  href="/WEB-INF/style/style.css" >
     <title>Flight</title>
 </head>
 <body>
-<h1>Flight</h1>
+<p>  </p>
+<p>  </p>
+<div class="navbar-wrapper" >
+
+
+    <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="container ">
+
+            <a class="navbar-brand" href="/"> Home </a>
+            <a class="navbar-brand" href="cities">  Cities  </a>
+            <a class="navbar-brand" href="flights">  Flights  </a>
+            <a class="navbar-brand" href="searchFlight">  Search flights  </a>
+
+        </div>
+    </nav>
+</div>
 <div class="container">
     <div class="jumbotron">
-<table class="table-striped">
+        <h1>Flight</h1>
+    </div></div>
+
+        <div class="container">
+            <div class="jumbotron">
+<table class="table-striped table-bordered" align="center">
+
     <%
         List<Flight> flights = (List<Flight>) request.getAttribute("flight");
         if (flights.size() != 0) {
@@ -36,8 +57,8 @@
         <td>CityName</td>
     </tr>
     <% for (Flight flight : flights) {%>
-    <tr>
-        <td><%=flight.getName() %>
+    <tr >
+        <td class="active"><%=flight.getName() %>
         </td>
         <td><%=flight.getDateTime() %>
         </td>
@@ -57,9 +78,10 @@
     Flights don't found
     <% }%>
 </table>
-    </div>
-</div>
-<div class="container">
+
+    </div></div>
+
+<div class="container" align="center">
     <div class="jumbotron">
 <h3>Add new flight</h3>
 
@@ -76,7 +98,7 @@
     <input type="text" name="name" id="name">
     <br> <br>
     <label for="date"> Date (yyyy-MM-dd): </label>
-    <input type="date" name="date" id="date">
+    <input type="text" name="date" id="date">
     <br> <br>
     <label for="numberOfPlace"> numberOfPlace: </label>
     <input type="number" name="numberOfPlace" id="numberOfPlace">
@@ -87,6 +109,6 @@
 <font color="green">${ifAdd}</font>
     </div>
 </div>
-<h3><a href="/">Go home</a></h3>
+
 </body>
 </html>

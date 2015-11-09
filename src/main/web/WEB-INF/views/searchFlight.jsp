@@ -10,12 +10,39 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="/resources/css/bootstrap-theme.css" >
+    <link rel="stylesheet"  href="/WEB-INF/style/style.css" >
     <title>${name}</title>
 </head>
 <body>
-<h1>${name}</h1>
-${searchFlight}
-<form method="GET" action="/searchFlight/result/?idCity={idCity}&date={date}&numberOfPlace={numberOfPlace}">
+<div class="navbar-wrapper" >
+
+
+    <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="container ">
+
+            <a class="navbar-brand" href="/"> Home </a>
+            <a class="navbar-brand" href="cities">  Cities  </a>
+            <a class="navbar-brand" href="flights">  Flights  </a>
+            <a class="navbar-brand" href="searchFlight">  Search flights  </a>
+
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="jumbotron">
+<h1>Searh flight</h1>
+
+</div></div>
+
+<div class="container">
+    <div class="jumbotron">
+
+        <form method="GET" action="/searchFlight/result/?idCity={idCity}&date={date}&numberOfPlace={numberOfPlace}">
     <label for=idCity>City: </label>
     <select name=idCity id="idCity">
         <% for (City city : (List<City>) request.getAttribute("cities")) {%>
@@ -32,6 +59,8 @@ ${searchFlight}
     <br> <br>
     <input type="submit"  value="searchAllOptions">
 </form>
-<h3><a href="/">Go home</a></h3>
+
+</div></div>
+
 </body>
 </html>
