@@ -42,7 +42,7 @@ public class FlightController extends BaseController {
 
         return "flights";
     }
-    @RequestMapping(value = "/delete/", method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public String deleteCity(@RequestParam int idFlight) {
         flightService.deleteFlight(idFlight);
         return "redirect:/flights";

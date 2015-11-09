@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by employee on 11/4/15.
  */
-@Service
+@Service()
 public interface CityService {
 
     public List<City> getAllCity();

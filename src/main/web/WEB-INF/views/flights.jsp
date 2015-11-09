@@ -68,7 +68,7 @@
         </td>
         <td><%=flight.getCity().getName() %>
         </td>
-        <td> <form method="POST" action="/flights/delete/?idFlight=<%=flight.getId()%>">
+        <td> <form method="POST" action="/flights/?idFlight=<%=flight.getId()%>">
                 <input type="submit" name="delete" value="delete">
             </form>
         </td>
@@ -81,7 +81,7 @@
 
     </div></div>
 
-<div class="container" align="center">
+<div class="container" >
     <div class="jumbotron">
 <h3>Add new flight</h3>
 

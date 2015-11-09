@@ -28,7 +28,7 @@
 //
 //    @Before
 //    public void setUp() throws Exception {
-//        controller = new console.TicketOfficeController(this, this);
+//        //controller = new console.TicketOfficeController(this, this);
 //    }
 //
 //    @Test
