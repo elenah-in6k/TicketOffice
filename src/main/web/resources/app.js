@@ -1,4 +1,4 @@
-var ticketOffice = angular.module('ticketOffice', []);
+var ticketOffice = angular.module('ticketOffice', ['ngRoute']);
 
 
 ticketOffice.controller('homeController', function ($scope, $http) {
@@ -19,6 +19,13 @@ ticketOffice.controller('homeController', function ($scope, $http) {
                     update();
                 })
         };
+        $scope.addCity = function (city) {
+            $http
+                .post('/ticketOffice/cities/', {name: city.name})
+                .then(function(response){
+                    update();
+                });
+        };
 
         var update = function() {
             $http
@@ -31,3 +38,25 @@ ticketOffice.controller('homeController', function ($scope, $http) {
         update();
 
 });
+ticketOffice.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
+        $routeProvider.
+        when('/home', {
+            templateUrl: 'views/home.html',
+            controller: 'homeController'}).
+        when('/cities', {
+            templateUrl: 'views/cities.html',
+            controller: 'cityCtrl'
+        }).
+        otherwise({
+            redirectTo: '/home'
+        });
+        $locationProvider.html5Mode(true);
+    }]);
+
+ticketOffice.directive('cities', [function() {
+    return {
+        restrict: 'E',
+        templateUrl: '/views/cities.html'
+    };
+}]);

@@ -2,10 +2,7 @@ package ngController;
 
 import core.entity.City;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import service.CityServiceImpl;
 
 import java.util.ArrayList;
@@ -27,6 +24,12 @@ public class MainController {
     public List<City> cities() {
         List<City> allCity = cityService.getAllCity();
         return allCity;
+    }
+
+    @RequestMapping(value = "/cities/", method = RequestMethod.POST)
+    public void addCity(@RequestBody City city) {
+        cityService.createCity(city.getName());
+
     }
 
     @RequestMapping(value = "/cities/{id}", method = RequestMethod.DELETE)

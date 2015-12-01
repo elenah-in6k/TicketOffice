@@ -1,46 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ticketOffice">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/css/bootstrap-theme.css">
     <link rel="stylesheet" href="style.css">
+    <base href="/resources/">
 </head>
-<body ng-app="ticketOffice">
+<body>
 <div class="navbar-wrapper">
 
 
     <nav class="navbar navbar-default">
         <div class="container ">
 
-            <a class="navbar-brand" href="http://localhost:8080/resources/index.html"> Home </a>
-            <!--<a class="navbar-brand" href="cities">  Cities  </a>-->
+            <a class="navbar-brand" href="home"> Home </a>
+            <a class="navbar-brand" href="cities">  Cities  </a>
             <!--<a class="navbar-brand" href="flights">  Flights  </a>-->
             <!--<a class="navbar-brand" href="searchFlight">  Search flights  </a>-->
 
         </div>
     </nav>
 </div>
-<div ng-controller="homeController">
-    <div ng-repeat="val in arr">{{val}}</div>
-</div>
-<div class="container">
-    <div class="jumbotron">
-        <div ng-controller="cityCtrl">
-            <table class="table-striped table-bordered" align="center" >
-                <tr ng-repeat="city in cities">
-                    <td>{{city.name}}
-                    <td>
-                    <td> <button ng-click="deleteCity(city)">Delete</button>
+<div ng-view> </div>
 
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
+
 </body>
 </html>
