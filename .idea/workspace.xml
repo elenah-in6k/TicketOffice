@@ -4,9 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/controllers/CityController.java" line="44" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="6182a8b0-5fac-4341-ad59-d479c71aeae5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+=======
+    <list default="true" id="6182a8b0-5fac-4341-ad59-d479c71aeae5" name="Default" comment="" />
+>>>>>>> Stashed changes
     <ignored path="TicketOffice.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1270,8 +1274,12 @@
       <workItem from="1448895744825" duration="1770000" />
       <workItem from="1448897678193" duration="1800000" />
       <workItem from="1448899994155" duration="430000" />
+<<<<<<< Updated upstream
       <workItem from="1448968196417" duration="5331000" />
       <workItem from="1448991240922" duration="572000" />
+=======
+      <workItem from="1448968196417" duration="9967000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="all">
       <created>1445440051802</created>
@@ -1439,7 +1447,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="187188000" />
+=======
+    <option name="totallyTimeSpent" value="191252000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="357" y="52" width="1314" height="997" extended-state="4" />
