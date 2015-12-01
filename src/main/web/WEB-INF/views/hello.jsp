@@ -46,6 +46,7 @@
         <h3> <a class="btn btn-default" href="http://10.1.1.85:8080/">  Igor CarShop  </a></h3>
         <h3> <a class="btn btn-default"  href="http://10.1.1.89:8080/">  Edgar Supermarket </a></h3>
     </div>
+    <h3> <a class="btn btn-default"  href="http://localhost:8080/resources/index.html">  Angular Version </a></h3>
 </div>
 </body>
 </html>

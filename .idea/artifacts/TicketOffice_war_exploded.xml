@@ -34,6 +34,9 @@
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:3.0-alpha-1" />
           <element id="library" level="project" name="Maven: javax.servlet:jsp-api:2.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.2.RELEASE" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
