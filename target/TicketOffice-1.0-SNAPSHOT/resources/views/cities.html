@@ -1,0 +1,26 @@
+<div ng-controller="cityCtrl">
+    <div class="container">
+        <div class="jumbotron">
+
+            <table class="table-striped table-bordered" align="center">
+                <tr ng-repeat="city in cities">
+                    <td>{{city.name}}
+                    <td>
+                    <td>
+                        <button ng-click="deleteCity(city)">Delete</button>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h3>Add city</h3>
+            Name: <input type="text" ng-model="city.name"><br>
+            <button ng-click="addCity(city)">Add</button>
+
+        </div>
+    </div>
+</div>
