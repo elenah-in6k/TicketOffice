@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
  */
 @Controller
 abstract public class BaseController  {
-    protected Date getDate(String date1) {
+    public Date getDate(String date1) {
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
         java.util.Date dateU = null;
         try {

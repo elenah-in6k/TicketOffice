@@ -25,16 +25,6 @@ public class Flight{
     @Column(name = "name")
     private String name;
 
-//    @ManyToOne
-//    @JoinTable
-//            (
-//                    name="idCity",
-//                    joinColumns={ @JoinColumn(name="idCity", referencedColumnName="idCity") },
-//                    inverseJoinColumns={ @JoinColumn(name="id", referencedColumnName="id", unique=true) }
-//            )
-
-//    @Column(name = "idCity")
-//    private int idCity;
     @ManyToOne
     @JoinColumn(name = "idCity")
     private City city;
@@ -71,9 +61,6 @@ public class Flight{
 
     public int getNumberOfReservedPlace() {
         return numberOfReservedPlace;
-//        "select count(t.id)"+
-//        "from Ticket t, Flight f "+
-//        "where (t.id = f.id)and(t.reserved = true)"
     }
 
     public void setId() {
@@ -100,6 +87,7 @@ public class Flight{
     public int getNumberOfEmptyPlaces(){
         return numberOfPlace - getNumberOfReservedPlace();
     }
+
     public Flight getFlight (Object o){
 
         return null;

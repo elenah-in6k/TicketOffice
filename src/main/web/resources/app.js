@@ -42,6 +42,8 @@ ticketOffice.controller('cityCtrl', function ($scope, $http) {
 ticketOffice.controller('flightCtrl', function ($scope, $http) {
     $scope.cities = [];
     $scope.flights = [];
+    var currentDate = new Date();
+    $scope.currentDate = currentDate.toISOString().slice(0,10);
 
     $scope.deleteFlight = function (flight) {
         $http
@@ -52,7 +54,12 @@ ticketOffice.controller('flightCtrl', function ($scope, $http) {
     };
     $scope.addFlight = function (flight) {
         $http
-            .post('/ticketOffice/flights/', {name: flight.name, idCity: flight.idCity, dateTime: flight.dateTime, numberOfPlace: flight.numberOfPlace })
+            .post('/ticketOffice/flights/', {
+                name: flight.name,
+                city: flight.city,
+                dateTime: flight.dateTime,
+                numberOfPlace: flight.numberOfPlace
+            })
             .then(function (response) {
                 update();
             });
