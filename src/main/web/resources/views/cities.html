@@ -23,9 +23,16 @@
     <div class="container">
         <div class="jumbotron">
             <h3>Add city</h3>
-            Name: <input type="text" ng-model="city.name"><br>
-            <button ng-click="addCity(city)">Add</button>
+            <form  name="myForm" novalidate>
+                Name: <input type="text" ng-model="city.name" name="cityName"  ng-minlength="2" required>
+                <span style="color:red" ng-show="myForm.cityName.$dirty && myForm.cityName.$invalid ">
+                <span ng-show="myForm.cityName.$error.required ">City is required.</span>
+                    <span ng-show="myForm.cityName.$error.minlength  ">Citi name length > 2.</span>
 
+                </span> <br/>
+                <button ng-click="addCity(city)">Add</button>
+
+            </form>
         </div>
     </div>
 </div>

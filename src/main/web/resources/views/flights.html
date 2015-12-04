@@ -1,0 +1,72 @@
+<div ng-controller="flightCtrl">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Flight</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+
+            <table class="table-striped table-bordered" align="center">
+                <tr>
+                    <td>Name</td>
+                    <td>DateTime</td>
+                    <td>NumberOfPlace</td>
+                    <td>NumberOfEmptyPlaces</td>
+                    <td>CityName</td>
+                </tr>
+                <tr ng-repeat="flight in flights">
+                    <td class="active">{{flight.name }}
+                    </td>
+                    <td>{{flight.dateTime}}
+                    </td>
+                    <td>{{flight.numberOfPlace }}
+                    </td>
+                    <td>{{flight.numberOfEmptyPlaces}}
+                    </td>
+                    <td>{{flight.city.name }}
+                    </td>
+                    <td>
+                    </td>
+                        <button ng-click="deleteFlight(flight)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h3>Add new flight</h3>
+            <form  name="myForm" novalidate>
+
+
+                <label for="idCity">City: </label>
+                <select ng-model="flight.idCity" name=idCity id="idCity">
+                    <option ng-repeat="city in cities"  value={{city.id}}>{{city.name}}
+                    </option>
+                </select>
+                <br> <br>
+                <label for="name"> Name: </label>
+                <input ng-model="flight.name" type="text" name="name" id="name">
+                <br> <br>
+                <label  for="date"> Date (yyyy-MM-dd): </label>
+                <input ng-model="flight.date"  type="text" name="date" id="date">
+                <br> <br>
+                <label for="numberOfPlace"> numberOfPlace: </label>
+                <input  ng-model="flight.numberOfPlace" type="number" name="numberOfPlace" id="numberOfPlace">
+                <br> <br>
+                <button ng-click="addFlight(flight)">Add</button>
+                <!---->
+                <!--Name: <input type="text" ng-model="city.name" name="cityName"  ng-minlength="2" required>-->
+                <!--<span style="color:red" ng-show="myForm.cityName.$dirty && myForm.cityName.$invalid ">-->
+                <!--<span ng-show="myForm.cityName.$error.required ">City is required.</span>-->
+                    <!--<span ng-show="myForm.cityName.$error.minlength  ">Citi name length > 2.</span>-->
+
+                <!--</span> <br/>-->
+
+
+            </form>
+        </div>
+    </div>
+</div>

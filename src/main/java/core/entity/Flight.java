@@ -1,6 +1,11 @@
 package core.entity;
 
+
+
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.sql.Date;
 import java.time.LocalDate;
 
@@ -15,6 +20,8 @@ public class Flight{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @NotNull
+    @Size(min = 1, max = 14)
     @Column(name = "name")
     private String name;
 
@@ -35,9 +42,10 @@ public class Flight{
     @Column(name = "dateTime")
     private Date dateTime;
 
+    @Min(0)
     @Column(name = "numberOfPlace")
     private int numberOfPlace;
-
+    @Min(0)
     @Column(name = "numberOfReservedPlace")
     private int numberOfReservedPlace;
 

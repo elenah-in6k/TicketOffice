@@ -1,6 +1,8 @@
 package core.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 /**
@@ -12,9 +14,11 @@ public class City {
     @Id
 
     @Column(name = "id")
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @NotNull
+    @Size(min = 2, max = 14)
     @Column(name = "name", length = 100, nullable = false)
     private String name;
 
